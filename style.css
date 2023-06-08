@@ -1,0 +1,31 @@
+
+.first-body {
+    background-image: url(img/the_fortune_tellers_tent__by_x_cannibal_dfasjsn-pre.jpg);
+    background-position: 0% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+}
+
+#title h1 {
+    background-color: blanchedalmond;
+    padding: 5px;
+    margin: 0;
+}
+
+#door {
+    position: absolute;
+    left: 43%;
+    top: 43%;
+    width: 14%;
+    border-radius: 90px;
+    opacity: 0.5;
+}
+
+#door:hover {
+    filter: brightness(150%);
+}
