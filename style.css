@@ -1,12 +1,54 @@
 
-.first-body {
-    background-image: url(img/the_fortune_tellers_tent__by_x_cannibal_dfasjsn-pre.jpg);
-    background-position: 0% 30%;
-    background-repeat: no-repeat;
-    background-size: cover;
+html, body {
+    height:100%;
 }
 
-#title {
+.bg-image {
+    background-image: url(./img/the_fortune_tellers_tent__by_x_cannibal_dfasjsn-pre.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.back-tent-button {
+    width: 30%;
+}
+
+ion-icon {
+    color:bisque;
+    font-size: 64px;
+    -webkit-transform: rotate(105deg);
+  -moz-transform: rotate(105deg);
+  -ms-transform: rotate(105deg);
+  -o-transform: rotate(105deg);
+  transform: rotate(105deg);
+  display: inline-block;
+}
+
+.front-arrow-one {
+    color:bisque;
+    -webkit-transform: rotate(115deg);
+  -moz-transform: rotate(115deg);
+  -ms-transform: rotate(115deg);
+  -o-transform: rotate(115deg);
+  transform: rotate(115deg);
+  width:110%
+}
+
+footer {
+    color:red;
+}
+
+
+/*.first-body {
+    background-image: url(img/the_fortune_tellers_tent__by_x_cannibal_dfasjsn-pre.jpg)
+    background-position: 0% 30%;
+    background-repeat: no-repeat;
+    background-size: cover 
+}
+
+
+
+/*#title {
     display: flex;
     justify-content: center;
 }
@@ -17,13 +59,14 @@
     margin: 0;
 }
 
+*/
 #door {
     position: absolute;
     left: 43%;
-    top: 43%;
+    top: 48%;
     width: 14%;
     border-radius: 90px;
-    opacity: 0.5;
+    opacity: 4;
 }
 
 #door:hover {
