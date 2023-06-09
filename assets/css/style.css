@@ -4,7 +4,7 @@ html, body {
 }
 
 .bg-image {
-    background-image: url(./img/the_fortune_tellers_tent__by_x_cannibal_dfasjsn-pre.jpg);
+    background-image: url(../img/the_fortune_tellers_tent__by_x_cannibal_dfasjsn-pre.jpg);
     background-size: cover;
     background-position: center center;
 }
