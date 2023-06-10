@@ -6,7 +6,7 @@ var fortuneCategory;
 
 fortuneBtn.addEventListener('click', function() {
     console.log('fortuneBtn works');
-    document.location.replace('./thirdpage.html');
+    //document.location.replace('./thirdpage.html');
 })
 
 //handles ajax request to Fortune Cookie API

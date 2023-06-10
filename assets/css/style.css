@@ -72,3 +72,63 @@ footer {
 #door:hover {
     filter: brightness(150%);
 }
+
+/* Third page css starts here */
+
+#page-3-container {
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background-image: url(https://i.etsystatic.com/18697140/r/il/e22680/2886990481/il_1588xN.2886990481_clz7.jpg);
+    background-size: 100% 100%;
+}
+
+#page-3-title-container {
+    border: 1px solid;
+    margin: 5px;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    top: 5%;
+    left: 22%;
+    border-radius: 15px;
+}
+
+#page-3-title {
+    font-size: 4rem;
+}
+
+#fortunes-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    height: 400px;
+    width: 55%;
+    perspective: 1100px;
+}
+
+#fortunes-container:last-child {
+    justify-content: center;
+}
+
+.fortune {
+    text-align: center;
+    font-size: 2rem;
+    border: 1px solid;
+    margin: 5px;
+    width: 30%;
+    height: 100px;
+    background-color: white;
+    transform-style: preserve-3d;
+    transform: rotateX(35deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.fortune:hover {
+    cursor: pointer;
+    transform: rotate('360deg');
+}
+
