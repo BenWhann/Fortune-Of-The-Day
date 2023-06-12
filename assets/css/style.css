@@ -34,11 +34,6 @@ ion-icon {
   width:110%
 }
 
-footer {
-    color:red;
-}
-
-
 /*.first-body {
     background-image: url(img/the_fortune_tellers_tent__by_x_cannibal_dfasjsn-pre.jpg)
     background-position: 0% 30%;
@@ -62,15 +57,268 @@ footer {
 */
 #door {
     position: absolute;
-    left: 43%;
-    top: 48%;
+    left: 42%;
+    top: 54%;
     width: 14%;
-    border-radius: 90px;
+    border-radius: 100px;
     opacity: 4;
 }
 
 #door:hover {
     filter: brightness(150%);
+}
+
+.animate__animated.animate__heartBeat {
+    --animate-duration: 2s;
+}
+
+.fireflies {
+    list-style: none;
+}
+
+
+.fireflies li {
+/*rounds out the boxes into circles*/
+border-radius: 50%;
+/*fireflies colors, background color with radial gradient and box shadow gives glowing effect*/
+background-color: rgb(255, 255, 73);
+/*radial gradient progressive transition of the 3 colors*/
+background-image: 
+radial-gradient(rgb(249, 206, 36) 5%,
+                rgb(254, 179, 4) 25%,
+                rgb(252, 191, 7) 60%);
+/*box shdaow creates the light glow*/             
+box-shadow: 
+    0 0 5px 2px rgb(250, 193, 93),
+    0 0 20px 10px rgb(255, 228, 140),
+    0 0 40px 15px rgb(255, 219, 41);
+height: 9px;
+width: 9px;
+
+position: absolute;
+left: 50%;
+top: 60%;
+
+animation: leftright 24s infinite cubic-bezier(0.39, 0, 0.63, 1),
+updown 8s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1),
+blinking 3s infinite;
+
+}
+
+/*target individual li's with the animation effects*/
+li:nth-of-type(1) {
+    animation-delay: 1s;
+    animation-duration: 65s, 81s, 0.01s;
+    animation-fill-mode: backwards, backwards;
+}
+
+li:nth-of-type(2) {
+    animation-delay: 0.5s;
+    animation-duration: 80s, 75s, 0.01s;
+}
+  
+li:nth-of-type(3) {
+    animation-delay: 1.5s;
+    animation-duration: 70s, 60s, 0.01s;
+    animation-fill-mode: backwards, backwards;
+}
+  
+li:nth-of-type(4) {
+    animation-delay: 2.5s;
+    animation-duration: 90s, 80s, 0.01s;
+}
+  
+li:nth-of-type(5) {
+    animation-delay: 0.3s;
+    animation-duration: 55s, 75s, 0.01s;
+}
+  
+li:nth-of-type(6) {
+    animation-delay: 2.2s;
+    animation-duration: 79s, 63s, 0.01s;
+    animation-fill-mode: backwards, backwards;
+}
+  
+li:nth-of-type(7) {
+    animation-delay: 0.9s;
+    animation-duration: 70s, 80s, 0.01s;
+}
+  
+li:nth-of-type(8) {
+    animation-delay: 1.6s;
+    animation-duration: 50s, 40s, 0.01s;
+    animation-fill-mode: backwards, backwards;
+}
+  
+li:nth-of-type(9) {
+    animation-delay: 1.8s;
+    animation-duration: 77s, 88s, 0.01s;
+}
+  
+li:nth-of-type(10) {
+    animation-delay: 3s;
+    animation-duration: 87s, 73s, 0.01s;
+    animation-fill-mode: backwards, backwards;
+}
+  
+/* last 10 */
+li:nth-of-type(11) {
+    animation-delay: 1s;
+    animation-duration: 60s, 78s, 0.01s;
+    animation-fill-mode: backwards, backwards;
+}
+  
+li:nth-of-type(12) {
+    animation-delay: 0.5s;
+    animation-duration: 85s, 80s, 0.01s;
+}
+  
+li:nth-of-type(13) {
+    animation-delay: 1.5s;
+    animation-duration: 75s, 66s, 0.01s;
+    animation-fill-mode: backwards, backwards;
+}
+  
+li:nth-of-type(14) {
+    animation-delay: 2.5s;
+    animation-duration: 87s, 75s, 0.01s;
+}
+  
+li:nth-of-type(15) {
+    animation-delay: 0.3s;
+    animation-duration: 69s, 85s, 0.01s;
+}
+  
+li:nth-of-type(16) {
+    animation-delay: 2.2s;
+    animation-duration: 80s, 77s, 0.01s;
+    animation-fill-mode: backwards, backwards;
+}
+  
+li:nth-of-type(17) {
+    animation-delay: 0.9s;
+    animation-duration: 65s, 88s, 0.01s;
+}
+  
+li:nth-of-type(18) {
+    animation-delay: 1.6s;
+    animation-duration: 59s, 63s, 0.01s;
+    animation-fill-mode: backwards, backwards;
+}
+  
+li:nth-of-type(19) {
+    animation-delay: 1.8s;
+    animation-duration: 88s, 79s, 0.01s;
+}
+  
+li:nth-of-type(20) {
+    animation-delay: 3s;
+    animation-duration: 59s, 75s, 0.01s;
+    animation-fill-mode: backwards, backwards;
+}
+
+/*controls left and right movements*/
+/*left refers to the absolute position on the page*/
+@keyframes leftright {
+  /*starting postion is*/
+    0%,
+    100% {
+        left: 50%;
+    }
+  
+    16.666% {
+        left: 95%;
+    }
+  
+    33.333% {
+        left: 10%;
+    }
+  /*halfway through the animation*/
+    50% {
+        left: 60%;
+    }
+  
+    66.666% {
+        left: 70%;
+    }
+  
+    83.333% {
+        left: 5%;
+    }
+}
+  
+/*controls the up and down*/
+/*top refers to the absolute position on the page*/
+@keyframes updown {
+  
+    0%,
+    100% {
+        top: 60%;
+    }
+  
+    25% {
+        top: 90%;
+    }
+  
+    50% {
+        top: 50%;
+    }
+  
+    75% {
+        top: 95%;
+    }
+}
+  
+
+/*controls the blinking*/
+@keyframes blinking {
+    /*use the blur and spread radius only*/
+    0%,
+    100% {
+        box-shadow: 0 0 5px 2px rgb(250, 193, 93), 
+                    0 0 10px 5px rgb(255, 242, 63),
+                    0 0 30px 10px rgb(255, 219, 41);
+        height: 0;
+        width: 0;
+    }
+  
+    50% {
+        box-shadow: 0 0 5px 2px rgb(250, 193, 93), 
+                    0 0 20px 10px rgb(255, 228, 140),
+                    0 0 40px 15px rgb(255, 219, 41);
+    }
+  
+    75% {
+        box-shadow: 0 0 0px 0px rgb(250, 193, 93), 
+                    0 0 0px 0px rgb(255, 228, 140),
+                    0 0 0px 0px rgb(255, 219, 41);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #door {
+        position: absolute;
+        left: 42%;
+        top: 54%;
+        width: 15%;
+        border-radius: 100px;
+        opacity: 4;
+    
+    }
+}
+
+@media screen and (max-width: 428px) {
+
+    #door {
+        position: absolute;
+        left: 41%;
+        top: 53%;
+        width: 18%;
+        border-radius: 100px;
+        opacity: 4;
+    
+    }
 }
 
 /* Third page css starts here */
