@@ -382,7 +382,7 @@ li:nth-of-type(20) {
 
 
 .second-body {
-    background-image: url(./img/Crystal-ball.png);
+    background-image: url(../img/Crystal-ball.png);
     background-repeat: no-repeat;
     height: 75%;
     background-position: 50% 0;
