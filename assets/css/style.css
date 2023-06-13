@@ -92,13 +92,17 @@ box-shadow:
     0 0 5px 2px rgb(250, 193, 93),
     0 0 20px 10px rgb(255, 228, 140),
     0 0 40px 15px rgb(255, 219, 41);
-height: 9px;
-width: 9px;
+height: 0px;
+width: 0px;
 
 position: absolute;
-left: 50%;
-top: 60%;
+left: 49.5%;
+top: 68%;
 
+/*animation ran at the numbered value and is set to an infinite loop*/
+/*cubic bezier smoothes out the animation motion*/
+/*the cubic bezier values set makes the fireflies transition start slowl*/
+/*and then will speed up and slow down again through out the animation*/
 animation: leftright 24s infinite cubic-bezier(0.39, 0, 0.63, 1),
 updown 8s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1),
 blinking 3s infinite;
@@ -107,8 +111,12 @@ blinking 3s infinite;
 
 /*target individual li's with the animation effects*/
 li:nth-of-type(1) {
+    /*value determines how long before animation starts*/
     animation-delay: 1s;
+    /*values determines the duration of the multiple animations*/
+                       /*lr, ud and blink*/
     animation-duration: 65s, 81s, 0.01s;
+    /*value backwards allows the delayed targets to have the animation values while delayed*/
     animation-fill-mode: backwards, backwards;
 }
 
@@ -161,7 +169,6 @@ li:nth-of-type(10) {
     animation-fill-mode: backwards, backwards;
 }
   
-/* last 10 */
 li:nth-of-type(11) {
     animation-delay: 1s;
     animation-duration: 60s, 78s, 0.01s;
@@ -220,10 +227,10 @@ li:nth-of-type(20) {
 /*controls left and right movements*/
 /*left refers to the absolute position on the page*/
 @keyframes leftright {
-  /*starting postion is*/
+  /*starting postion*/
     0%,
     100% {
-        left: 50%;
+        left: 49.5%;
     }
   
     16.666% {
@@ -250,10 +257,10 @@ li:nth-of-type(20) {
 /*controls the up and down*/
 /*top refers to the absolute position on the page*/
 @keyframes updown {
-  
+  /*starting position*/
     0%,
     100% {
-        top: 60%;
+        top: 68%;
     }
   
     25% {
