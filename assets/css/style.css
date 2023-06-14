@@ -467,10 +467,18 @@ li:nth-of-type(20) {
 .second-body {
     background-image: url(../img/Crystal-ball.png);
     background-repeat: no-repeat;
-    height: 75%;
     background-position: 50% 0;
     background-color:bisque;
 } 
+
+.crystalBall {
+    display: flex;
+    position: absolute;
+    left: 28%;
+    top: 5%;
+    width: 40%;
+    opacity: 0%;
+}
 
 #page-container {
     position: relative;

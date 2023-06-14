@@ -1,6 +1,7 @@
 var fortuneBtn = document.querySelector('#fortuneBtn');
-var imageBox = document.querySelector('.imageTest');
+var imageBox = document.querySelector('.imageStickers');
 var fortuneText = document.querySelector('#fortuneText');
+var crystalBall = document.querySelector('.crystalBall');
 
 var dayJs = dayjs();
 var today = dayJs.format('dddd');
@@ -16,7 +17,12 @@ fortuneBtn.addEventListener('click', function () {
     document.location.replace('./thirdpage.html');
 })
 
-firstApiCall();
+//adding mouse over event listener to crystal ball. After "Rubbing" ball for 4.5
+//seconds we will call first api to get fortune
+crystalBall.addEventListener('mouseover',callApiAfterTime);
+function callApiAfterTime() {
+    setTimeout(firstApiCall,4500);
+}
 
 function firstApiCall() {
     //handles ajax request to Fortune Cookie API
