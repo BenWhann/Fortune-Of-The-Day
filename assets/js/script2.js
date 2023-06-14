@@ -2,6 +2,15 @@ var fortuneBtn = document.querySelector('#fortuneBtn');
 var imageBox = document.querySelector('.imageTest');
 var fortuneText = document.querySelector('#fortuneText');
 
+/*cursor*/
+var  cursor = document.querySelector('.cursor')
+document.addEventListener('mousemove', e => {
+  console.log(e);
+  cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+})
+
+
+
 var dayJs = dayjs();
 var today = dayJs.format('MM/DD');
 console.log(today);
