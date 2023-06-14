@@ -456,7 +456,12 @@ li:nth-of-type(20) {
 }
 
 .card {
-    
+    background-color: white;
+    border: 1px solid;
+}
+
+.closeButton {
+    background-color: white;
 }
 
 .hide {
