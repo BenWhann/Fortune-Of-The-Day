@@ -1,6 +1,7 @@
 var fortuneBtn = document.querySelector('#fortuneBtn');
 var imageBox = document.querySelector('.imageTest');
 var fortuneText = document.querySelector('#fortuneText');
+var crystalBall = document.querySelector('.crystalBall');
 
 /*cursor*/
 var  cursor = document.querySelector('.cursor')
@@ -9,24 +10,29 @@ document.addEventListener('mousemove', e => {
   cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
 })
 
-
-
 var dayJs = dayjs();
-var today = dayJs.format('MM/DD');
-console.log(today);
-
-fortuneBtn.addEventListener('click', function () {
-    console.log('fortuneBtn works');
-    document.location.replace('./thirdpage.html');
-})
+var today = dayJs.format('dddd');
 
 function DailyFortune(weekDay, fortune) {
     this.weekDay = weekDay;
     this.fortune = fortune;
 };
+
+//call local storage in global variable for page
 var storedFortuneArray = JSON.parse(localStorage.getItem("Fortunes")) || [];
 
-firstApiCall();
+//button to advance to the third page
+fortuneBtn.addEventListener('click', function () {
+    console.log('fortuneBtn works');
+    document.location.replace('./thirdpage.html');
+})
+
+//adding mouse over event listener to crystal ball. After "Rubbing" ball for 4.5
+//seconds we will call first api to get fortune
+crystalBall.addEventListener('mouseover',callApiAfterTime);
+function callApiAfterTime() {
+    setTimeout(firstApiCall,4500);
+}
 
 function firstApiCall() {
     //handles ajax request to Fortune Cookie API
@@ -40,16 +46,16 @@ function firstApiCall() {
             'X-RapidAPI-Host': 'fortune-cookie2.p.rapidapi.com'
         },
         success: function (data) {
-            console.log(data);
+            //set fortunetext to returned fortune from API call
             fortuneText.textContent = data.answer;
-            console.log(data.category);
             var newFortune = new DailyFortune(today, data.answer);
-            
+     
             if (storedFortuneArray != null) {
+                //check if any object in array contains date value. If a fortune already exists for that day, we don't want
+                //to add another. Only 1 fortune per day.
                 var containsDate = storedFortuneArray.some(obj => obj["weekDay"] === today);
                 if(!containsDate)
                 {
-                    console.log("todays date not stored");
                     storedFortuneArray.push(newFortune);
                     localStorage.setItem("Fortunes", JSON.stringify(storedFortuneArray));
                 }
@@ -58,12 +64,12 @@ function firstApiCall() {
                 storedFortuneArray.push(newFortune);
                 localStorage.setItem("Fortunes", JSON.stringify(storedFortuneArray));
             }
-            console.log(storedFortuneArray);
+            //make call to second function, call second API
             secondApiCall(data.category);
         },
         error: function (jqXHR, textStatus, errorThrown) {
             if (jqXHR.status === 429) {
-                // Handle 429 status code here -- too mayn api requests
+                // Handle 429 status code here -- too many api requests
                 console.error('Too Many Requests:', jqXHR.responseText);
             } else {
                 // Handle other errors here
@@ -77,14 +83,13 @@ function firstApiCall() {
 
 
 function secondApiCall(category) {
-    console.log("here");
-    console.log(category);
-
+    //if category returned from first API call is general fortune, pass fortune to next API call instead due to limited results
     if (category == "General fortune") {
         category = "Fortune";
     }
 
-    var queryURL = 'http://api.giphy.com/v1/stickers/search?q=' + category + '&limit=5&api_key=wZmi04Bta6Iozo1cs6TlyPaawcltolg1';
+    //query string: limiting to return 5 result and rating is g or pg, search by category returned from first api call
+    var queryURL = 'http://api.giphy.com/v1/stickers/search?q=' + category + '&limit=5&rating=pg&api_key=wZmi04Bta6Iozo1cs6TlyPaawcltolg1';
     //handles ajax request to Giphy API
     $.ajax({
         url: queryURL, method: 'GET', success: function (data) {
@@ -93,6 +98,7 @@ function secondApiCall(category) {
             const shuffled = [...data.data].sort(() => 0.5 - Math.random());
             var resultArray =  shuffled.slice(0, 2);
             resultArray.forEach(element => {
+                //create new image element and append to imageBox section
                 imageBox.appendChild(new Image()).src = element.images.fixed_height.url;
             });
         },
