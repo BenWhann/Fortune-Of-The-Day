@@ -10,17 +10,18 @@ document.addEventListener('mousemove', e => {
   cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
 })
 
-
-
 var dayJs = dayjs();
 var today = dayJs.format('dddd');
-console.log(today);
+
 function DailyFortune(weekDay, fortune) {
     this.weekDay = weekDay;
     this.fortune = fortune;
 };
+
+//call local storage in global variable for page
 var storedFortuneArray = JSON.parse(localStorage.getItem("Fortunes")) || [];
 
+//button to advance to the third page
 fortuneBtn.addEventListener('click', function () {
     console.log('fortuneBtn works');
     document.location.replace('./thirdpage.html');
