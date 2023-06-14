@@ -1,5 +1,5 @@
 var fortuneBtn = document.querySelector('#fortuneBtn');
-var imageBox = document.querySelector('.imageStickers');
+var imageBox = document.querySelector('.imageTest');
 var fortuneText = document.querySelector('#fortuneText');
 var crystalBall = document.querySelector('.crystalBall');
 
