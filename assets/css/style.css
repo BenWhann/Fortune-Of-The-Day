@@ -370,17 +370,6 @@ li:nth-of-type(20) {
     
     }
 
-    .banner {
-
-    }
-
-    #bannerL {
-
-    }
-
-    #bannerR {
-
-    }
 }
 
 @media screen and (max-width: 428px) {
@@ -493,7 +482,188 @@ li:nth-of-type(20) {
   #content-wrap {
     padding-bottom: 2.5rem;    /* Footer height */
   }
+
+#smokeAniOne {
+    position: absolute;
+    left: 45%;
+    top: 17%;
+    transform: translateX(-50%) rotate(221deg);
+}
+
+#smokeAniTwo {
+    position: absolute;
+    left: 54%;
+    top: 14%;
+    transform: translateX(-50%) rotate(154deg);
+}
+
+/*Smoke Animation*/
+#smokeAniThree {
+    position: absolute;
+    left: 43%;
+    top: 24%;
+    transform: translateX(-50%) rotate(118deg);
+}
+
+#smokeAniFour {
+    position: absolute;
+    left: 57%;
+    top: 22%;
+    transform: translateX(-50%) rotate(66deg);
+}
+
+#smokeOne, #smokeTwo, #smokeThree, #smokeFour {
+    filter: blur(1px);
+}
+
+#smokeOne {
+    animation: smoke1 6s linear infinite;
+    animation-delay: 0.5s;
+}
+
+#smokeTwo {
+    animation: smoke2 5s linear infinite;
+    animation-delay: 0.5s;
+}
+
+#smokeThree {
+    animation: smoke3 4s linear infinite;
+    animation-delay: 0.4s;
+}
+
+#smokeFour {
+    animation: smoke4 7s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes smoke1 {
+    0% {
+      filter: blur(0px) brightness(5px);
+      transform: translateY(0px);
+      opacity: 0.3;
+    }
   
+    25% {
+      filter: blur(3px) brightness(8px);
+      transform: translateY(-10px);
+      opacity: 0.8;
+    }
+  
+    50% {
+      filter: blur(5px) brightness(10px);
+      transform: translateY(-20px);
+      opacity: 1.5;
+    }
+  
+    75% {
+      filter: blur(5px) brightness(13px);
+      transform: translateY(-30px);
+      opacity: 1.0;
+    }
+  
+    100% {
+      filter: blur(7px) brightness(15px);
+      transform: translateY(-40px);
+      opacity: 0.7;
+    }
+  }
+  
+  @keyframes smoke2 {
+    0% {
+      filter: blur(0px) brightness(5px);
+      transform: translateY(0px);
+      opacity: 0;
+    }
+  
+    25% {
+      filter: blur(3px) brightness(8px);
+      transform: translateY(-10px);
+      opacity: 0.5;
+    }
+  
+    50% {
+      filter: blur(5px) brightness(10px);
+      transform: translateY(-20px);
+      opacity: 1;
+    }
+  
+    75% {
+      filter: blur(5px) brightness(13px);
+      transform: translateY(-30px);
+      opacity: 0.5;
+    }
+  
+    100% {
+      filter: blur(7px) brightness(15px);
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes smoke3 {
+    0% {
+      filter: blur(0px) brightness(4px);
+      transform: translateY(0px);
+      opacity: 0;
+    }
+  
+    25% {
+      filter: blur(3px) brightness(8px);
+      transform: translateY(-20px);
+      opacity: 0.5;
+    }
+  
+    50% {
+      filter: blur(5px) brightness(10px); 
+      transform: translateY(-40px);
+      opacity: 1;
+    }
+  
+    75% {
+      filter: blur(5px) brightness(13px);
+      transform: translateY(-60px);
+      opacity: 0.5;
+    }
+  
+    100% {
+      filter: blur(7px) brightness(16px);
+      transform: translateY(-80px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes smoke4 {
+    0% {
+      filter: blur(0px) brightness(4px);
+      transform: translateY(0px);
+      opacity: 0;
+    }
+  
+    25% {
+      filter: blur(3px) brightness(6px);
+      transform: translateY(-20px);
+      opacity: 0.5;
+    }
+  
+    50% {
+      filter: blur(5px) brightness(9px);
+      transform: translateY(-40px);
+      opacity: 1;
+    }
+  
+    75% {
+      filter: blur(5px) brightness(13px);
+      transform: translateY(-60px);
+      opacity: 0.5;
+    }
+  
+    100% {
+      filter: blur(7px) brightness(16px);
+      transform: translateY(-80px);
+      opacity: 0;
+    }
+  }
+
 .imageTest img {
     position: absolute;
     top: 22%;
