@@ -489,6 +489,55 @@ li:nth-of-type(20) {
     padding-bottom: 2.5rem;    /* Footer height */
   }
   
+.imageTest img {
+    position: absolute;
+    top: 22%;
+    left: 43%;
+    height: 80px;
+    width: auto;
+}
+
+img:nth-of-type(1) {
+    animation-name: giphy;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+}
+
+img:nth-of-type(2) {
+    animation-name: giphyTwo;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes giphy {
+    0% { 
+        top: 22%;
+        left: 43%;
+    }
+ 
+    100% {
+        top: 14%;
+        left: 5%;
+        height: auto;
+        width: auto;
+    }
+  }
+
+  @keyframes giphyTwo {
+    0% { 
+        top: 22%;
+        left: 43%;
+    }
+ 
+    100% {
+        top: 45%;
+        left: 5%;
+        height: auto;
+        width: auto;
+    }
+  }
+
   #footer {
     position: absolute;
     bottom: 0;

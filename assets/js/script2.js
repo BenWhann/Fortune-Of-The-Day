@@ -3,6 +3,15 @@ var imageBox = document.querySelector('.imageStickers');
 var fortuneText = document.querySelector('#fortuneText');
 var crystalBall = document.querySelector('.crystalBall');
 
+/*cursor*/
+var  cursor = document.querySelector('.cursor')
+document.addEventListener('mousemove', e => {
+  console.log(e);
+  cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+})
+
+
+
 var dayJs = dayjs();
 var today = dayJs.format('dddd');
 console.log(today);
