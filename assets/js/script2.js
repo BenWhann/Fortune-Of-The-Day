@@ -8,15 +8,15 @@ console.log(today);
 
 fortuneBtn.addEventListener('click', function () {
     console.log('fortuneBtn works');
-    //document.location.replace('./thirdpage.html');
+    document.location.replace('./thirdpage.html');
 })
 
 function DailyFortune(weekDay, fortune) {
     this.weekDay = weekDay;
     this.fortune = fortune;
 };
+var storedFortuneArray = JSON.parse(localStorage.getItem("Fortunes")) || [];
 
-var fortuneArray = [];
 firstApiCall();
 
 function firstApiCall() {
@@ -32,23 +32,22 @@ function firstApiCall() {
         },
         success: function (data) {
             console.log(data);
-            //fortuneText.text(data.answer);
             fortuneText.textContent = data.answer;
             console.log(data.category);
             var newFortune = new DailyFortune(today, data.answer);
-            var storedFortunes = localStorage.getItem("Fortunes");
-            var storedFortuneArray = JSON.parse(storedFortunes);
+            
             if (storedFortuneArray != null) {
-                storedFortuneArray.forEach(element => {
-                    if (!storedFortuneArray.includes(element.weekDay)) {
-                        fortuneArray.push(newFortune);
-                        localStorage.setItem("Fortunes", JSON.stringify(fortuneArray));
-                    }
-                });
+                var containsDate = storedFortuneArray.some(obj => obj["weekDay"] === today);
+                if(!containsDate)
+                {
+                    console.log("todays date not stored");
+                    storedFortuneArray.push(newFortune);
+                    localStorage.setItem("Fortunes", JSON.stringify(storedFortuneArray));
+                }
             }
             else {
-                fortuneArray.push(newFortune);
-                localStorage.setItem("Fortunes", JSON.stringify(fortuneArray));
+                storedFortuneArray.push(newFortune);
+                localStorage.setItem("Fortunes", JSON.stringify(storedFortuneArray));
             }
             console.log(storedFortuneArray);
             secondApiCall(data.category);
