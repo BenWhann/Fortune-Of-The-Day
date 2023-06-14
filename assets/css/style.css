@@ -1,4 +1,5 @@
 
+
 html, body {
     height:100%;
 }
@@ -387,7 +388,7 @@ li:nth-of-type(20) {
     transform: rotate('360deg');
 }
 
-
+/* start of 2nd page */
 .second-body {
     background-image: url(../img/Crystal-ball.png);
     background-repeat: no-repeat;
