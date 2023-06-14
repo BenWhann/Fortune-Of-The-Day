@@ -1,0 +1,49 @@
+html {
+    margin:0;
+    height: 100vh;
+    
+    
+}
+
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid blueviolet;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    animation: cursorAnim .5s infinite alternate;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    border: 8px solid black;
+    border-radius: 50%;
+    opacity: .5;
+    animation: cursorAnim2 .5s infinite alternate;
+    
+    
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
