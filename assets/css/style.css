@@ -455,6 +455,14 @@ li:nth-of-type(20) {
     transform: rotate('360deg');
 }
 
+.card {
+    
+}
+
+.hide {
+    display: none;
+}
+
 /* start of 2nd page */
 .second-body {
     background-image: url(../img/Crystal-ball.png);
