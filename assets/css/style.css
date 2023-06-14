@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Rye);
 
 html, body {
     height:100%;
@@ -6,8 +7,62 @@ html, body {
 .bg-image {
     background-image: url(../img/the_fortune_tellers_tent__by_x_cannibal_dfasjsn-pre.jpg);
     background-size: cover;
-    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+/*png svg image of clipart*/
+.banner {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    display: block;
+    margin: 100px -200px;
+    width: 400px;
+    height: 60px;
+    border: 1px solid rgb(245, 218, 130);
+    font: normal 30px/60px 'Rye';
+    text-align: center;
+    color: rgb(53, 63, 23);
+    background:rgb(255, 228, 140);
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0,0,3,.15) inset,
+                        0 6px 10px rgba(0,0,3,.15);
+    transform-style: preserve-3d;
+  }
+
+  .banner::before {
+    content: '';
+    position:absolute;
+    left: -71px;
+    z-index: -1;
+    top: 15px;;
+    width: 90px;
+    display: block;
+    height: 60px;
+    border: 30px solid rgb(255, 228, 140);
+    border-right: 20px solid rgb(194, 173, 105);
+    border-bottom-color: rgb(255, 228, 140);
+    border-left: 20px solid transparent;
+    transform: translateZ(-1px) rotate(-5deg);
+  }
+
+  .banner::after {
+    content: '';
+    position:absolute;
+    z-index: -1;
+    left: 380px;
+    top: 15px;
+    width: 90px;
+    display: block;
+    height: 60px;
+    border: 30px solid rgb(255, 228, 140);
+    border-left: 20px solid rgb(194, 173, 105);
+    border-bottom-color: rgb(255, 228, 140);
+    border-right: 20px solid transparent;
+    transform: rotate(5deg);
+    transform: translateZ(-1px) rotate(6deg);
+  }
 
 .back-tent-button {
     width: 30%;
@@ -312,6 +367,18 @@ li:nth-of-type(20) {
         border-radius: 100px;
         opacity: 4;
     
+    }
+
+    .banner {
+
+    }
+
+    #bannerL {
+
+    }
+
+    #bannerR {
+
     }
 }
 
