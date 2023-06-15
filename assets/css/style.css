@@ -483,6 +483,74 @@ li:nth-of-type(20) {
     width: 40%;
     opacity: 0%;
 }
+.bannerTwo {
+    position: absolute;
+    left: 50%;
+    bottom:12%;
+    display: block;
+    margin: 100px -200px;
+    width: 400px;
+    height: 60px;
+    border: 1px solid rgb(245, 218, 130);
+    font: normal 30px/60px 'Rye';
+    text-align: center;
+    color: rgb(53, 63, 23);
+    background:rgb(255, 228, 140);
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0,0,3,.15) inset,
+                        0 6px 10px rgba(0,0,3,.15);
+    transform-style: preserve-3d;
+  }
+
+  .bannerTwo::before {
+    content: '';
+    position:absolute;
+    left: -71px;
+    z-index: -1;
+    top: 15px;;
+    width: 90px;
+    display: block;
+    height: 60px;
+    border: 30px solid rgb(255, 228, 140);
+    border-right: 20px solid rgb(194, 173, 105);
+    border-bottom-color: rgb(255, 228, 140);
+    border-left: 20px solid transparent;
+    transform: translateZ(-1px) rotate(-5deg);
+  }
+
+  .bannerTwo::after {
+    content: '';
+    position:absolute;
+    z-index: -1;
+    left: 380px;
+    top: 15px;
+    width: 90px;
+    display: block;
+    height: 60px;
+    border: 30px solid rgb(255, 228, 140);
+    border-left: 20px solid rgb(194, 173, 105);
+    border-bottom-color: rgb(255, 228, 140);
+    border-right: 20px solid transparent;
+    transform: rotate(5deg);
+    transform: translateZ(-1px) rotate(6deg);
+  }
+
+#fortuneBox {
+    position:absolute !important;
+    margin-left: 78%;
+    margin-top: 5%;
+    width: 200px !important;
+    
+    
+}
+
+#fortuneText {
+    font-size: 22px;;
+    font-family: fantasy;
+    background-color: rgb(221, 218, 223);
+    text-decoration: underline;
+    
+}
 
 #page-container {
     position: relative;
@@ -492,6 +560,9 @@ li:nth-of-type(20) {
   #content-wrap {
     padding-bottom: 2.5rem;    /* Footer height */
   }
+
+
+
 
 #smokeAniOne {
     position: absolute;
@@ -685,7 +756,7 @@ li:nth-of-type(20) {
 .imageTest img:nth-of-type(1) {
     animation-name: giphy;
     animation-duration: 8s;
-    animation-fill-mode: forwards;
+    animation-fill-mode:forwards;
 }
 
 .imageTest img:nth-of-type(2) {
@@ -712,7 +783,7 @@ li:nth-of-type(20) {
   @keyframes giphyTwo {
     0% { 
         top: 22%;
-        left: 43%;
+        right: 43%;
     }
  
     100% {
@@ -737,10 +808,12 @@ li:nth-of-type(20) {
 }
 
 #moonIconOne {
+    margin-top:1%;
     margin-left: 10%;
     background-color: rgba(255, 0, 0, 0.74);
 }
 #moonIconTwo {
+    margin-top: 1%;
     margin-left: 70%;
     background-color:  rgba(255, 0, 0, 0.74);
 }
