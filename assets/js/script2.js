@@ -1,7 +1,10 @@
 var fortuneBtn = document.querySelector('#fortuneBtn');
+var mainPage = document.querySelector('#mainPage');
 var imageBox = document.querySelector('.imageTest');
 var fortuneText = document.querySelector('#fortuneText');
 var crystalBall = document.querySelector('.crystalBall');
+
+
 
 /*cursor*/
 var  cursor = document.querySelector('.cursor')
@@ -27,6 +30,11 @@ fortuneBtn.addEventListener('click', function () {
     document.location.replace('./thirdpage.html');
 })
 
+mainPage.addEventListener('click', function () {
+    console.log('mainPage works');
+    document.location.replace('./index.html');
+})
+
 //adding mouse over event listener to crystal ball. After "Rubbing" ball for 4.5
 //seconds we will call first api to get fortune
 crystalBall.addEventListener('mouseover',callApiAfterTime);
@@ -47,7 +55,7 @@ function firstApiCall() {
         },
         success: function (data) {
             //set fortunetext to returned fortune from API call
-            fortuneText.textContent = data.answer;
+            fortuneText.textContent = "YOUR FORTUNE FOR THE DAY:" + "\n" +  data.answer;
             var newFortune = new DailyFortune(today, data.answer);
      
             if (storedFortuneArray != null) {
