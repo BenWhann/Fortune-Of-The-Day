@@ -387,6 +387,7 @@ li:nth-of-type(20) {
 
 /* Third page css starts here */
 
+
 #page-3-container {
     border: 1px solid;
     display: flex;
@@ -447,15 +448,24 @@ li:nth-of-type(20) {
 .card {
     background-color: white;
     border: 1px solid;
+    position: absolute;
+    bottom: -75px;
+    text-align: center;
 }
 
 .closeButton {
     background-color: white;
+    position: absolute;
+    bottom: -100px;
+    margin: auto;
+
+
 }
 
 .hide {
     display: none;
 }
+
 
 /* start of 2nd page */
 .second-body {
