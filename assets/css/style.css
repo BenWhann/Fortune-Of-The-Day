@@ -385,6 +385,12 @@ li:nth-of-type(20) {
     }
 }
 
+
+
+
+
+
+
 /* Third page css starts here */
 
 
@@ -466,13 +472,12 @@ li:nth-of-type(20) {
     display: none;
 }
 
-
 /* start of 2nd page */
 .second-body {
     background-image: url(../img/Crystal-ball.png);
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-color:bisque;
+    background-color:rgb(167, 160, 160);
 } 
 
 .crystalBall {
@@ -545,12 +550,32 @@ li:nth-of-type(20) {
 }
 
 #fortuneText {
-    font-size: 22px;;
-    font-family: fantasy;
-    background-color: rgb(221, 218, 223);
-    text-decoration: underline;
+    font-family: fantasy; 
     
-}
+       background-image: linear-gradient( /* all the word colors you see changing on page */
+         -100deg,
+         #05030d 5%,
+         #42196e 29%,
+         rgba(255, 0, 0, 0.74) 67%,
+         rgb(255, 228, 140) 100%
+       );
+       background-size: 200% auto; /* Does background gradient repeating effect on fortune words */
+       -webkit-background-clip: text; /* Makes text appear on page with effects added on text*/
+       -webkit-text-fill-color: transparent; /* the fill color effect without this words wont have color effect */
+       animation: textclip 2s linear infinite; /* color animation resetting every 2s */
+       display: inline-block; /* makes display of color change come from right to left of page */
+           font-size: 22px;
+     }
+     
+     @keyframes textclip {
+       to {
+         background-position: 200%; /* also a factor in how fast text changes in color from right to left */
+       }
+     }
+
+
+
+
 
 #page-container {
     position: relative;
@@ -757,6 +782,7 @@ li:nth-of-type(20) {
     animation-name: giphy;
     animation-duration: 8s;
     animation-fill-mode:forwards;
+    
 }
 
 .imageTest img:nth-of-type(2) {
@@ -774,7 +800,7 @@ li:nth-of-type(20) {
  
     100% {
         top: 14%;
-        left: 5%;
+        left: 0%;
         height: auto;
         width: auto;
     }
@@ -788,7 +814,7 @@ li:nth-of-type(20) {
  
     100% {
         top: 45%;
-        left: 5%;
+        left: 0%;
         height: auto;
         width: auto;
     }
@@ -799,7 +825,7 @@ li:nth-of-type(20) {
     bottom: 0;
     width: 100%;
     height: 11rem;
-    background-color:bisque;            /* Footer height */
+    background-color: rgb(167, 160, 160);;            /* Footer height */
   }
 
 .buttonsInside {
