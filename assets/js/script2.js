@@ -35,11 +35,14 @@ mainPage.addEventListener('click', function () {
     document.location.replace('./index.html');
 })
 
-//adding mouse over event listener to crystal ball. After "Rubbing" ball for 4.5
-//seconds we will call first api to get fortune
-crystalBall.addEventListener('mouseover',callApiAfterTime);
+//adding mouse over event listener to crystal ball. After "Rubbing" ball for 2
+//seconds we will call first api to get fortune. We will only call this event listener once. 
+$('#crystalBall').one('mouseover', function() {
+    callApiAfterTime();
+  });
+
 function callApiAfterTime() {
-    setTimeout(firstApiCall,4500);
+    setTimeout(firstApiCall,2000);
 }
 
 function firstApiCall() {
