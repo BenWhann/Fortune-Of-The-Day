@@ -451,21 +451,21 @@ li:nth-of-type(20) {
     transform: rotate('360deg');
 }
 
+#cards-container {
+  border: 3px solid;
+  width: 100px;
+  z-index: 1;
+}
+
 .card {
     background-color: white;
     border: 1px solid;
-    position: absolute;
-    bottom: -75px;
     text-align: center;
 }
 
 .closeButton {
     background-color: white;
-    position: absolute;
-    bottom: -100px;
     margin: auto;
-
-
 }
 
 .hide {
