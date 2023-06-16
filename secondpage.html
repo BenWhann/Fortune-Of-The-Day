@@ -13,26 +13,30 @@
 </head>
 
 <body class="second-body">
+  <!-- class to handle custom cursor following element -->
   <div class="cursor"></div>
   <div id="page-container">
     <div id="content-wrap">
       <section>
+        <!-- contains the 2 moon icons and the directive banner -->
         <ion-icon id="moonIconOne" color="black" name="moon-outline"></ion-icon>
         <span class="bannerTwo"> Rub orb for a Fortune</span>
         <ion-icon id="moonIconTwo" color="black" name="moon-outline"> </ion-icon>
       </section>
 
+      <!-- contains the fortune text that will be set in the js -->
       <section id="fortuneBox">
         <h2><span id="fortuneText"></span></h2>
       </section>
 
+      <!-- parent class the giphy stickers will be appended to -->
       <div class="imageTest"></div>
-
-
+      <!-- the transparent image the user will hover or rub over to make fortune appear -->
       <img class="crystalBall" id="crystalBall" src="./assets/img/clearBackground.png">
-
     </div>
   </div>
+
+  <!-- smoke images that animate over the crystal ball -->
   <div id="smokeAniOne">
     <img id="smokeOne" src="assets/img/smoke.png">
   </div>
@@ -44,8 +48,9 @@
   </div>
   <div id="smokeAniFour">
     <img id="smokeFour" src="assets/img/smoke.png">
-  </div>   
+  </div>
 
+  <!-- footer containing 2 nav buttons -->
   <footer id="footer">
     <button class="button is-large is-fullwidth buttonsInside buttonsPagetwo" id="fortuneBtn">See your weekly
       fortunes</button>
@@ -59,6 +64,5 @@
   <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 </body>
-
 
 </html>

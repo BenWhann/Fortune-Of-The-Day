@@ -7,7 +7,6 @@ var crystalBall = document.querySelector('.crystalBall');
 /*cursor*/
 var cursor = document.querySelector('.cursor')
 document.addEventListener('mousemove', e => {
-    console.log(e);
     cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
 })
 
@@ -45,8 +44,6 @@ $('#crystalBall').one('mouseover', function () {
 function callApiAfterTime() {
     //checking if user already recieved a fortune for the day. If not, call api for the first time. If they already got
     //a fortune, retrieve the day's fortune from local storage and display that again.
-    console.log(today);
-    console.log(currentDate);
     if (today !== currentDate) {
         currentDate = today;
         localStorage.setItem("CurrentDate", currentDate);
@@ -120,11 +117,10 @@ function secondApiCall(category) {
     }
 
     //query string: limiting to return 5 result and rating is g or pg, search by category returned from first api call
-    var queryURL = 'http://api.giphy.com/v1/stickers/search?q=' + category + '&limit=5&rating=pg&api_key=wZmi04Bta6Iozo1cs6TlyPaawcltolg1';
+    var queryURL = 'https://api.giphy.com/v1/stickers/search?q=' + category + '&limit=5&rating=pg&api_key=wZmi04Bta6Iozo1cs6TlyPaawcltolg1';
     //handles ajax request to Giphy API
     $.ajax({
         url: queryURL, method: 'GET', success: function (data) {
-            console.log(data.data);
             //shuffle 5 returned stickers, and select 2 from shuffled array
             const shuffled = [...data.data].sort(() => 0.5 - Math.random());
             var resultArray = shuffled.slice(0, 2);
