@@ -65,16 +65,6 @@ html, body {
     transform: translateZ(-1px) rotate(6deg);
   }
 
-.front-arrow-one {
-    color:bisque;
-    -webkit-transform: rotate(115deg);
-  -moz-transform: rotate(115deg);
-  -ms-transform: rotate(115deg);
-  -o-transform: rotate(115deg);
-  transform: rotate(115deg);
-  width:110%
-}
-
 #door {
     position: absolute;
     left: 46.7%;
@@ -514,19 +504,16 @@ li:nth-of-type(20) {
 
   }
 
-#fortuneBox {
+/*#fortuneBox {
     position:absolute !important;
     margin-left: 78%;
     margin-top: 5%;
     width: 200px !important;
-    
-    
-}
-
+}*/
 #fortuneText {
-    font-family: fantasy; 
 
-   
+    font-family: fantasy; 
+    
        background-image: linear-gradient( /* all the word colors you see changing on page */
          -100deg,
          #05030d 5%,
@@ -539,7 +526,7 @@ li:nth-of-type(20) {
        -webkit-text-fill-color: transparent; /* the fill color effect without this words wont have color effect */
        animation: textclip 2s linear infinite; /* color animation resetting every 2s */
        display: inline-block; /* makes display of color change come from right to left of page */
-           font-size: 22px;
+
      }
      
      @keyframes textclip {
@@ -559,7 +546,36 @@ li:nth-of-type(20) {
         }
     
     }
+    
+#fortuneBox {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  font-size: 3px;
+  max-width: 30ch;
+  width: 30px;
+  animation: fortune;
+  animation-duration: 8s;
+  animation-fill-mode: forwards;
+}
+  
+@keyframes fortune {
+  
+  0% { 
+    top: 20%;
+    left: 50%;
+    font-size: 3px;
+    filter: blur(10px);
+}
 
+100% {
+    top: 25%;
+    left: 76.5%;
+    font-size: 22px;
+    width: 200px;
+    filter: blur(0px)
+}
+}
 
 
 #page-container {
@@ -781,12 +797,16 @@ li:nth-of-type(20) {
     0% { 
         top: 22%;
         left: 43%;
+        filter: blur(10px);
+        height: 0px;
+        width: 0px;
     }
  
     100% {
         top: 14%;
-        left: 0%;
-        height: auto;
+        left: 7%;
+        filter: blur(0px);
+        height: 160px;
         width: auto;
     }
   }
@@ -795,12 +815,16 @@ li:nth-of-type(20) {
     0% { 
         top: 22%;
         right: 43%;
+        filter: blur(10px);
+        height: 0px;
+        width: 0px;
     }
  
     100% {
         top: 45%;
-        left: 0%;
-        height: auto;
+        left: 7%;
+        filter: blur(0px);
+        height: 160px;
         width: auto;
     }
   }
