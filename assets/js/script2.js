@@ -4,17 +4,16 @@ var imageBox = document.querySelector('.imageTest');
 var fortuneText = document.querySelector('#fortuneText');
 var crystalBall = document.querySelector('.crystalBall');
 
-
-
 /*cursor*/
-var  cursor = document.querySelector('.cursor')
+var cursor = document.querySelector('.cursor')
 document.addEventListener('mousemove', e => {
-  console.log(e);
-  cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+    console.log(e);
+    cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
 })
 
 var dayJs = dayjs();
-var today = dayJs.format('dddd');
+var dayOfWeek = dayJs.format('dddd');
+var today = dayJs.format('MM/DD');
 
 function DailyFortune(weekDay, fortune) {
     this.weekDay = weekDay;
@@ -22,6 +21,7 @@ function DailyFortune(weekDay, fortune) {
 };
 
 //call local storage in global variable for page
+var currentDate = localStorage.getItem("CurrentDate");
 var storedFortuneArray = JSON.parse(localStorage.getItem("Fortunes")) || [];
 
 //button to advance to the third page
@@ -30,6 +30,7 @@ fortuneBtn.addEventListener('click', function () {
     document.location.replace('./thirdpage.html');
 })
 
+//button to return to the first page
 mainPage.addEventListener('click', function () {
     console.log('mainPage works');
     document.location.replace('./index.html');
@@ -37,12 +38,32 @@ mainPage.addEventListener('click', function () {
 
 //adding mouse over event listener to crystal ball. After "Rubbing" ball for 2
 //seconds we will call first api to get fortune. We will only call this event listener once. 
-$('#crystalBall').one('mouseover', function() {
+$('#crystalBall').one('mouseover', function () {
     callApiAfterTime();
-  });
+});
 
 function callApiAfterTime() {
-    setTimeout(firstApiCall,2000);
+    //checking if user already recieved a fortune for the day. If not, call api for the first time. If they already got
+    //a fortune, retrieve the day's fortune from local storage and display that again.
+    console.log(today);
+    console.log(currentDate);
+    if (today !== currentDate) {
+        currentDate = today;
+        localStorage.setItem("CurrentDate", currentDate);
+        setTimeout(firstApiCall, 2000);
+    }
+    else {
+        if (storedFortuneArray.some(obj => obj["weekDay"] === dayOfWeek)) {
+            var fortune = storedFortuneArray.filter(obj => {
+                return obj.weekDay === dayOfWeek
+            })
+            fortuneText.textContent = "YOUR FORTUNE FOR THE DAY:" + "\n" + fortune[0].fortune;
+            secondApiCall("repeat");
+        }
+        else {
+            fortuneText.textContent = "Fortune unclear! Try again tomorrow.";
+        }
+    }
 }
 
 function firstApiCall() {
@@ -58,15 +79,14 @@ function firstApiCall() {
         },
         success: function (data) {
             //set fortunetext to returned fortune from API call
-            fortuneText.textContent = "YOUR FORTUNE FOR THE DAY:" + "\n" +  data.answer;
-            var newFortune = new DailyFortune(today, data.answer);
-     
+            fortuneText.textContent = "YOUR FORTUNE FOR THE DAY:" + "\n" + data.answer;
+            var newFortune = new DailyFortune(dayOfWeek, data.answer);
+
             if (storedFortuneArray != null) {
                 //check if any object in array contains date value. If a fortune already exists for that day, we don't want
                 //to add another. Only 1 fortune per day.
-                var containsDate = storedFortuneArray.some(obj => obj["weekDay"] === today);
-                if(!containsDate)
-                {
+                var containsDate = storedFortuneArray.some(obj => obj["weekDay"] === dayOfWeek);
+                if (!containsDate) {
                     storedFortuneArray.push(newFortune);
                     localStorage.setItem("Fortunes", JSON.stringify(storedFortuneArray));
                 }
@@ -107,7 +127,7 @@ function secondApiCall(category) {
             console.log(data.data);
             //shuffle 5 returned stickers, and select 2 from shuffled array
             const shuffled = [...data.data].sort(() => 0.5 - Math.random());
-            var resultArray =  shuffled.slice(0, 2);
+            var resultArray = shuffled.slice(0, 2);
             resultArray.forEach(element => {
                 //create new image element and append to imageBox section
                 imageBox.appendChild(new Image()).src = element.images.fixed_height.url;
