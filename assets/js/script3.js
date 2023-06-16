@@ -17,7 +17,7 @@ storedFortuneArray.forEach(element => {
     newDiv2.setAttribute("class", "card");
     newDiv2.classList.add("hide");
     newDiv2.setAttribute("id","card-"+i);
-    fortuneContainer.appendChild(newDiv2);
+    cardContainer.appendChild(newDiv2);
 
     var closeButton = document.createElement('button');
     closeButton.textContent = "Close Fortune";
@@ -25,7 +25,7 @@ storedFortuneArray.forEach(element => {
     closeButton.setAttribute('type', 'button');
     closeButton.classList.add("hide");
     closeButton.setAttribute('id', 'closeButton-'+i);
-    fortuneContainer.appendChild(closeButton);
+    cardContainer.appendChild(closeButton);
 
     i++;
 });
