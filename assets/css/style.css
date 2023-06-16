@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Rye);
 
 
-html, body {
-    height:100%;
+html,
+body {
+    height: 100%;
 }
 
 .bg-image {
@@ -25,19 +26,20 @@ html, body {
     font: normal 30px/60px 'Rye';
     text-align: center;
     color: rgb(53, 63, 23);
-    background:rgb(255, 228, 140);
+    background: rgb(255, 228, 140);
     border-radius: 4px;
-    box-shadow: 0 0 30px rgba(0,0,3,.15) inset,
-                        0 6px 10px rgba(0,0,3,.15);
+    box-shadow: 0 0 30px rgba(0, 0, 3, .15) inset,
+        0 6px 10px rgba(0, 0, 3, .15);
     transform-style: preserve-3d;
-  }
+}
 
-  .banner::before {
+.banner::before {
     content: '';
-    position:absolute;
+    position: absolute;
     left: -71px;
     z-index: -1;
-    top: 15px;;
+    top: 15px;
+    ;
     width: 90px;
     display: block;
     height: 60px;
@@ -46,11 +48,11 @@ html, body {
     border-bottom-color: rgb(255, 228, 140);
     border-left: 20px solid transparent;
     transform: translateZ(-1px) rotate(-5deg);
-  }
+}
 
-  .banner::after {
+.banner::after {
     content: '';
-    position:absolute;
+    position: absolute;
     z-index: -1;
     left: 380px;
     top: 15px;
@@ -63,31 +65,31 @@ html, body {
     border-right: 20px solid transparent;
     transform: rotate(5deg);
     transform: translateZ(-1px) rotate(6deg);
-  }
+}
 
 .back-tent-button {
     width: 30%;
 }
 
 ion-icon {
-    color:bisque;
+    color: bisque;
     font-size: 64px;
     -webkit-transform: rotate(105deg);
-  -moz-transform: rotate(105deg);
-  -ms-transform: rotate(105deg);
-  -o-transform: rotate(105deg);
-  transform: rotate(105deg);
-  display: inline-block;
+    -moz-transform: rotate(105deg);
+    -ms-transform: rotate(105deg);
+    -o-transform: rotate(105deg);
+    transform: rotate(105deg);
+    display: inline-block;
 }
 
 .front-arrow-one {
-    color:bisque;
+    color: bisque;
     -webkit-transform: rotate(115deg);
-  -moz-transform: rotate(115deg);
-  -ms-transform: rotate(115deg);
-  -o-transform: rotate(115deg);
-  transform: rotate(115deg);
-  width:110%
+    -moz-transform: rotate(115deg);
+    -ms-transform: rotate(115deg);
+    -o-transform: rotate(115deg);
+    transform: rotate(115deg);
+    width: 110%
 }
 
 /*.first-body {
@@ -134,34 +136,34 @@ ion-icon {
 
 
 .fireflies li {
-/*rounds out the boxes into circles*/
-border-radius: 50%;
-/*fireflies colors, background color with radial gradient and box shadow gives glowing effect*/
-background-color: rgb(255, 255, 73);
-/*radial gradient progressive transition of the 3 colors*/
-background-image: 
-radial-gradient(rgb(249, 206, 36) 5%,
-                rgb(254, 179, 4) 25%,
-                rgb(252, 191, 7) 60%);
-/*box shdaow creates the light glow*/             
-box-shadow: 
-    0 0 5px 2px rgb(250, 193, 93),
-    0 0 20px 10px rgb(255, 228, 140),
-    0 0 40px 15px rgb(255, 219, 41);
-height: 0px;
-width: 0px;
+    /*rounds out the boxes into circles*/
+    border-radius: 50%;
+    /*fireflies colors, background color with radial gradient and box shadow gives glowing effect*/
+    background-color: rgb(255, 255, 73);
+    /*radial gradient progressive transition of the 3 colors*/
+    background-image:
+        radial-gradient(rgb(249, 206, 36) 5%,
+            rgb(254, 179, 4) 25%,
+            rgb(252, 191, 7) 60%);
+    /*box shdaow creates the light glow*/
+    box-shadow:
+        0 0 5px 2px rgb(250, 193, 93),
+        0 0 20px 10px rgb(255, 228, 140),
+        0 0 40px 15px rgb(255, 219, 41);
+    height: 0px;
+    width: 0px;
 
-position: absolute;
-left: 49.5%;
-top: 68%;
+    position: absolute;
+    left: 49.5%;
+    top: 68%;
 
-/*animation ran at the numbered value and is set to an infinite loop*/
-/*cubic bezier smoothes out the animation motion*/
-/*the cubic bezier values set makes the fireflies transition start slowl*/
-/*and then will speed up and slow down again through out the animation*/
-animation: leftright 24s infinite cubic-bezier(0.39, 0, 0.63, 1),
-updown 8s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1),
-blinking 3s infinite;
+    /*animation ran at the numbered value and is set to an infinite loop*/
+    /*cubic bezier smoothes out the animation motion*/
+    /*the cubic bezier values set makes the fireflies transition start slowl*/
+    /*and then will speed up and slow down again through out the animation*/
+    animation: leftright 24s infinite cubic-bezier(0.39, 0, 0.63, 1),
+        updown 8s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1),
+        blinking 3s infinite;
 
 }
 
@@ -170,7 +172,7 @@ li:nth-of-type(1) {
     /*value determines how long before animation starts*/
     animation-delay: 1s;
     /*values determines the duration of the multiple animations*/
-                       /*lr, ud and blink*/
+    /*lr, ud and blink*/
     animation-duration: 65s, 81s, 0.01s;
     /*value backwards allows the delayed targets to have the animation values while delayed*/
     animation-fill-mode: backwards, backwards;
@@ -180,100 +182,100 @@ li:nth-of-type(2) {
     animation-delay: 0.5s;
     animation-duration: 80s, 75s, 0.01s;
 }
-  
+
 li:nth-of-type(3) {
     animation-delay: 1.5s;
     animation-duration: 70s, 60s, 0.01s;
     animation-fill-mode: backwards, backwards;
 }
-  
+
 li:nth-of-type(4) {
     animation-delay: 2.5s;
     animation-duration: 90s, 80s, 0.01s;
 }
-  
+
 li:nth-of-type(5) {
     animation-delay: 0.3s;
     animation-duration: 55s, 75s, 0.01s;
 }
-  
+
 li:nth-of-type(6) {
     animation-delay: 2.2s;
     animation-duration: 79s, 63s, 0.01s;
     animation-fill-mode: backwards, backwards;
 }
-  
+
 li:nth-of-type(7) {
     animation-delay: 0.9s;
     animation-duration: 70s, 80s, 0.01s;
 }
-  
+
 li:nth-of-type(8) {
     animation-delay: 1.6s;
     animation-duration: 50s, 40s, 0.01s;
     animation-fill-mode: backwards, backwards;
 }
-  
+
 li:nth-of-type(9) {
     animation-delay: 1.8s;
     animation-duration: 77s, 88s, 0.01s;
 }
-  
+
 li:nth-of-type(10) {
     animation-delay: 3s;
     animation-duration: 87s, 73s, 0.01s;
     animation-fill-mode: backwards, backwards;
 }
-  
+
 li:nth-of-type(11) {
     animation-delay: 1s;
     animation-duration: 60s, 78s, 0.01s;
     animation-fill-mode: backwards, backwards;
 }
-  
+
 li:nth-of-type(12) {
     animation-delay: 0.5s;
     animation-duration: 85s, 80s, 0.01s;
 }
-  
+
 li:nth-of-type(13) {
     animation-delay: 1.5s;
     animation-duration: 75s, 66s, 0.01s;
     animation-fill-mode: backwards, backwards;
 }
-  
+
 li:nth-of-type(14) {
     animation-delay: 2.5s;
     animation-duration: 87s, 75s, 0.01s;
 }
-  
+
 li:nth-of-type(15) {
     animation-delay: 0.3s;
     animation-duration: 69s, 85s, 0.01s;
 }
-  
+
 li:nth-of-type(16) {
     animation-delay: 2.2s;
     animation-duration: 80s, 77s, 0.01s;
     animation-fill-mode: backwards, backwards;
 }
-  
+
 li:nth-of-type(17) {
     animation-delay: 0.9s;
     animation-duration: 65s, 88s, 0.01s;
 }
-  
+
 li:nth-of-type(18) {
     animation-delay: 1.6s;
     animation-duration: 59s, 63s, 0.01s;
     animation-fill-mode: backwards, backwards;
 }
-  
+
 li:nth-of-type(19) {
     animation-delay: 1.8s;
     animation-duration: 88s, 79s, 0.01s;
 }
-  
+
 li:nth-of-type(20) {
     animation-delay: 3s;
     animation-duration: 59s, 75s, 0.01s;
@@ -283,78 +285,82 @@ li:nth-of-type(20) {
 /*controls left and right movements*/
 /*left refers to the absolute position on the page*/
 @keyframes leftright {
-  /*starting postion*/
+
+    /*starting postion*/
     0%,
     100% {
         left: 49.5%;
     }
-  
+
     16.666% {
         left: 95%;
     }
-  
+
     33.333% {
         left: 10%;
     }
-  /*halfway through the animation*/
+
+    /*halfway through the animation*/
     50% {
         left: 60%;
     }
-  
+
     66.666% {
         left: 70%;
     }
-  
+
     83.333% {
         left: 5%;
     }
 }
-  
+
 /*controls the up and down*/
 /*top refers to the absolute position on the page*/
 @keyframes updown {
-  /*starting position*/
+
+    /*starting position*/
     0%,
     100% {
         top: 68%;
     }
-  
+
     25% {
         top: 90%;
     }
-  
+
     50% {
         top: 50%;
     }
-  
+
     75% {
         top: 95%;
     }
 }
-  
+
 
 /*controls the blinking*/
 @keyframes blinking {
+
     /*use the blur and spread radius only*/
     0%,
     100% {
-        box-shadow: 0 0 5px 2px rgb(250, 193, 93), 
-                    0 0 10px 5px rgb(255, 242, 63),
-                    0 0 30px 10px rgb(255, 219, 41);
+        box-shadow: 0 0 5px 2px rgb(250, 193, 93),
+            0 0 10px 5px rgb(255, 242, 63),
+            0 0 30px 10px rgb(255, 219, 41);
         height: 0;
         width: 0;
     }
-  
+
     50% {
-        box-shadow: 0 0 5px 2px rgb(250, 193, 93), 
-                    0 0 20px 10px rgb(255, 228, 140),
-                    0 0 40px 15px rgb(255, 219, 41);
+        box-shadow: 0 0 5px 2px rgb(250, 193, 93),
+            0 0 20px 10px rgb(255, 228, 140),
+            0 0 40px 15px rgb(255, 219, 41);
     }
-  
+
     75% {
-        box-shadow: 0 0 0px 0px rgb(250, 193, 93), 
-                    0 0 0px 0px rgb(255, 228, 140),
-                    0 0 0px 0px rgb(255, 219, 41);
+        box-shadow: 0 0 0px 0px rgb(250, 193, 93),
+            0 0 0px 0px rgb(255, 228, 140),
+            0 0 0px 0px rgb(255, 219, 41);
     }
 }
 
@@ -367,7 +373,7 @@ li:nth-of-type(20) {
         width: 15%;
         border-radius: 100px;
         opacity: 4;
-    
+
     }
 
 }
@@ -381,19 +387,11 @@ li:nth-of-type(20) {
         width: 18%;
         border-radius: 100px;
         opacity: 4;
-    
+
     }
 }
 
-
-
-
-
-
-
 /* Third page css starts here */
-
-
 #page-3-container {
     border: 1px solid;
     display: flex;
@@ -477,9 +475,10 @@ li:nth-of-type(20) {
     background-image: url(../img/Crystal-ball.png);
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-color:rgb(167, 160, 160);
-} 
+    background-color: rgb(167, 160, 160);
+}
 
+/* styles invisible circle pic that the user hovers or rubs on to trigger the first api call */
 .crystalBall {
     display: flex;
     position: absolute;
@@ -488,10 +487,11 @@ li:nth-of-type(20) {
     width: 40%;
     opacity: 0%;
 }
+
 .bannerTwo {
     position: absolute;
     left: 50%;
-    bottom:12%;
+    bottom: 12%;
     display: block;
     margin: 100px -200px;
     width: 400px;
@@ -500,19 +500,20 @@ li:nth-of-type(20) {
     font: normal 30px/60px 'Rye';
     text-align: center;
     color: rgb(53, 63, 23);
-    background:rgb(255, 228, 140);
+    background: rgb(255, 228, 140);
     border-radius: 4px;
-    box-shadow: 0 0 30px rgba(0,0,3,.15) inset,
-                        0 6px 10px rgba(0,0,3,.15);
+    box-shadow: 0 0 30px rgba(0, 0, 3, .15) inset,
+        0 6px 10px rgba(0, 0, 3, .15);
     transform-style: preserve-3d;
-  }
+}
 
-  .bannerTwo::before {
+.bannerTwo::before {
     content: '';
-    position:absolute;
+    position: absolute;
     left: -71px;
     z-index: -1;
-    top: 15px;;
+    top: 15px;
+    ;
     width: 90px;
     display: block;
     height: 60px;
@@ -521,11 +522,11 @@ li:nth-of-type(20) {
     border-bottom-color: rgb(255, 228, 140);
     border-left: 20px solid transparent;
     transform: translateZ(-1px) rotate(-5deg);
-  }
+}
 
-  .bannerTwo::after {
+.bannerTwo::after {
     content: '';
-    position:absolute;
+    position: absolute;
     z-index: -1;
     left: 380px;
     top: 15px;
@@ -538,53 +539,54 @@ li:nth-of-type(20) {
     border-right: 20px solid transparent;
     transform: rotate(5deg);
     transform: translateZ(-1px) rotate(6deg);
-  }
+}
 
 #fortuneBox {
-    position:absolute !important;
+    position: absolute !important;
     margin-left: 78%;
     margin-top: 5%;
     width: 200px !important;
-    
-    
 }
 
 #fortuneText {
-    font-family: fantasy; 
-    
-       background-image: linear-gradient( /* all the word colors you see changing on page */
-         -100deg,
-         #05030d 5%,
-         #42196e 29%,
-         rgba(255, 0, 0, 0.74) 67%,
-         rgb(255, 228, 140) 100%
-       );
-       background-size: 200% auto; /* Does background gradient repeating effect on fortune words */
-       -webkit-background-clip: text; /* Makes text appear on page with effects added on text*/
-       -webkit-text-fill-color: transparent; /* the fill color effect without this words wont have color effect */
-       animation: textclip 2s linear infinite; /* color animation resetting every 2s */
-       display: inline-block; /* makes display of color change come from right to left of page */
-           font-size: 22px;
-     }
-     
-     @keyframes textclip {
-       to {
-         background-position: 200%; /* also a factor in how fast text changes in color from right to left */
-       }
-     }
+    font-family: fantasy;
 
+    background-image: linear-gradient(
+            /* all the word colors you see changing on page */
+            -100deg,
+            #05030d 5%,
+            #42196e 29%,
+            rgba(255, 0, 0, 0.74) 67%,
+            rgb(255, 228, 140) 100%);
+    background-size: 200% auto;
+    /* Does background gradient repeating effect on fortune words */
+    -webkit-background-clip: text;
+    /* Makes text appear on page with effects added on text*/
+    -webkit-text-fill-color: transparent;
+    /* the fill color effect without this words wont have color effect */
+    animation: textclip 2s linear infinite;
+    /* color animation resetting every 2s */
+    display: inline-block;
+    /* makes display of color change come from right to left of page */
+    font-size: 22px;
+}
 
-
-
+@keyframes textclip {
+    to {
+        background-position: 200%;
+        /* also a factor in how fast text changes in color from right to left */
+    }
+}
 
 #page-container {
     position: relative;
     min-height: 100vh;
-  }
-  
-  #content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
-  }
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+    /* Footer height */
+}
 
 
 
@@ -618,7 +620,10 @@ li:nth-of-type(20) {
     transform: translateX(-50%) rotate(66deg);
 }
 
-#smokeOne, #smokeTwo, #smokeThree, #smokeFour {
+#smokeOne,
+#smokeTwo,
+#smokeThree,
+#smokeFour {
     filter: blur(1px);
 }
 
@@ -644,131 +649,131 @@ li:nth-of-type(20) {
 
 @keyframes smoke1 {
     0% {
-      filter: blur(0px) brightness(5px);
-      transform: translateY(0px);
-      opacity: 0.3;
+        filter: blur(0px) brightness(5px);
+        transform: translateY(0px);
+        opacity: 0.3;
     }
-  
-    25% {
-      filter: blur(3px) brightness(8px);
-      transform: translateY(-10px);
-      opacity: 0.8;
-    }
-  
-    50% {
-      filter: blur(5px) brightness(10px);
-      transform: translateY(-20px);
-      opacity: 1.5;
-    }
-  
-    75% {
-      filter: blur(5px) brightness(13px);
-      transform: translateY(-30px);
-      opacity: 1.0;
-    }
-  
-    100% {
-      filter: blur(7px) brightness(15px);
-      transform: translateY(-40px);
-      opacity: 0.7;
-    }
-  }
-  
-  @keyframes smoke2 {
-    0% {
-      filter: blur(0px) brightness(5px);
-      transform: translateY(0px);
-      opacity: 0;
-    }
-  
-    25% {
-      filter: blur(3px) brightness(8px);
-      transform: translateY(-10px);
-      opacity: 0.5;
-    }
-  
-    50% {
-      filter: blur(5px) brightness(10px);
-      transform: translateY(-20px);
-      opacity: 1;
-    }
-  
-    75% {
-      filter: blur(5px) brightness(13px);
-      transform: translateY(-30px);
-      opacity: 0.5;
-    }
-  
-    100% {
-      filter: blur(7px) brightness(15px);
-      transform: translateY(-40px);
-      opacity: 0;
-    }
-  }
-  
-  @keyframes smoke3 {
-    0% {
-      filter: blur(0px) brightness(4px);
-      transform: translateY(0px);
-      opacity: 0;
-    }
-  
-    25% {
-      filter: blur(3px) brightness(8px);
-      transform: translateY(-20px);
-      opacity: 0.5;
-    }
-  
-    50% {
-      filter: blur(5px) brightness(10px); 
-      transform: translateY(-40px);
-      opacity: 1;
-    }
-  
-    75% {
-      filter: blur(5px) brightness(13px);
-      transform: translateY(-60px);
-      opacity: 0.5;
-    }
-  
-    100% {
-      filter: blur(7px) brightness(16px);
-      transform: translateY(-80px);
-      opacity: 0;
-    }
-  }
 
-  @keyframes smoke4 {
-    0% {
-      filter: blur(0px) brightness(4px);
-      transform: translateY(0px);
-      opacity: 0;
-    }
-  
     25% {
-      filter: blur(3px) brightness(6px);
-      transform: translateY(-20px);
-      opacity: 0.5;
+        filter: blur(3px) brightness(8px);
+        transform: translateY(-10px);
+        opacity: 0.8;
     }
-  
+
     50% {
-      filter: blur(5px) brightness(9px);
-      transform: translateY(-40px);
-      opacity: 1;
+        filter: blur(5px) brightness(10px);
+        transform: translateY(-20px);
+        opacity: 1.5;
     }
-  
+
     75% {
-      filter: blur(5px) brightness(13px);
-      transform: translateY(-60px);
-      opacity: 0.5;
+        filter: blur(5px) brightness(13px);
+        transform: translateY(-30px);
+        opacity: 1.0;
     }
-  
+
     100% {
-      filter: blur(7px) brightness(16px);
-      transform: translateY(-80px);
-      opacity: 0;
+        filter: blur(7px) brightness(15px);
+        transform: translateY(-40px);
+        opacity: 0.7;
     }
-  }
+}
+
+@keyframes smoke2 {
+    0% {
+        filter: blur(0px) brightness(5px);
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    25% {
+        filter: blur(3px) brightness(8px);
+        transform: translateY(-10px);
+        opacity: 0.5;
+    }
+
+    50% {
+        filter: blur(5px) brightness(10px);
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+
+    75% {
+        filter: blur(5px) brightness(13px);
+        transform: translateY(-30px);
+        opacity: 0.5;
+    }
+
+    100% {
+        filter: blur(7px) brightness(15px);
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+}
+
+@keyframes smoke3 {
+    0% {
+        filter: blur(0px) brightness(4px);
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    25% {
+        filter: blur(3px) brightness(8px);
+        transform: translateY(-20px);
+        opacity: 0.5;
+    }
+
+    50% {
+        filter: blur(5px) brightness(10px);
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+
+    75% {
+        filter: blur(5px) brightness(13px);
+        transform: translateY(-60px);
+        opacity: 0.5;
+    }
+
+    100% {
+        filter: blur(7px) brightness(16px);
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
+
+@keyframes smoke4 {
+    0% {
+        filter: blur(0px) brightness(4px);
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    25% {
+        filter: blur(3px) brightness(6px);
+        transform: translateY(-20px);
+        opacity: 0.5;
+    }
+
+    50% {
+        filter: blur(5px) brightness(9px);
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+
+    75% {
+        filter: blur(5px) brightness(13px);
+        transform: translateY(-60px);
+        opacity: 0.5;
+    }
+
+    100% {
+        filter: blur(7px) brightness(16px);
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
 
 .imageTest img {
     position: absolute;
@@ -781,8 +786,8 @@ li:nth-of-type(20) {
 .imageTest img:nth-of-type(1) {
     animation-name: giphy;
     animation-duration: 8s;
-    animation-fill-mode:forwards;
-    
+    animation-fill-mode: forwards;
+
 }
 
 .imageTest img:nth-of-type(2) {
@@ -793,54 +798,56 @@ li:nth-of-type(20) {
 
 
 @keyframes giphy {
-    0% { 
+    0% {
         top: 22%;
         left: 43%;
     }
- 
+
     100% {
         top: 14%;
         left: 0%;
         height: auto;
         width: auto;
     }
-  }
+}
 
-  @keyframes giphyTwo {
-    0% { 
+@keyframes giphyTwo {
+    0% {
         top: 22%;
         right: 43%;
     }
- 
+
     100% {
         top: 45%;
         left: 0%;
         height: auto;
         width: auto;
     }
-  }
+}
 
-  #footer {
+#footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 11rem;
-    background-color: rgb(167, 160, 160);;            /* Footer height */
-  }
+    background-color: rgb(167, 160, 160);
+    ;
+    /* Footer height */
+}
 
 .buttonsInside {
-    background-color:rgba(255, 0, 0, 0.74);
+    background-color: rgba(255, 0, 0, 0.74);
     font-family: fantasy;
 }
 
 #moonIconOne {
-    margin-top:1%;
+    margin-top: 1%;
     margin-left: 10%;
     background-color: rgba(255, 0, 0, 0.74);
 }
+
 #moonIconTwo {
     margin-top: 1%;
     margin-left: 70%;
-    background-color:  rgba(255, 0, 0, 0.74);
+    background-color: rgba(255, 0, 0, 0.74);
 }
-
