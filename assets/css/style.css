@@ -540,6 +540,16 @@ li:nth-of-type(20) {
     transform: translateZ(-1px) rotate(6deg);
   }
 
+  @media screen and (max-width: 1024px) {
+    .bannerTwo {
+        left: 50%;
+        bottom: 13%;
+    }
+
+
+
+  }
+
 #fortuneBox {
     position:absolute !important;
     margin-left: 78%;
@@ -551,7 +561,8 @@ li:nth-of-type(20) {
 
 #fortuneText {
     font-family: fantasy; 
-    
+
+   
        background-image: linear-gradient( /* all the word colors you see changing on page */
          -100deg,
          #05030d 5%,
@@ -573,7 +584,17 @@ li:nth-of-type(20) {
        }
      }
 
+     @media screen and (max-width: 1024px) {
 
+        #fortuneBox {
+            position:absolute !important;
+            margin-left: 81%;
+            margin-top: 5%;
+            width: 175px !important; 
+        
+        }
+    
+    }
 
 
 
