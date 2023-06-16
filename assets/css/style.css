@@ -65,21 +65,6 @@ html, body {
     transform: translateZ(-1px) rotate(6deg);
   }
 
-.back-tent-button {
-    width: 30%;
-}
-
-ion-icon {
-    color:bisque;
-    font-size: 64px;
-    -webkit-transform: rotate(105deg);
-  -moz-transform: rotate(105deg);
-  -ms-transform: rotate(105deg);
-  -o-transform: rotate(105deg);
-  transform: rotate(105deg);
-  display: inline-block;
-}
-
 .front-arrow-one {
     color:bisque;
     -webkit-transform: rotate(115deg);
@@ -90,34 +75,13 @@ ion-icon {
   width:110%
 }
 
-/*.first-body {
-    background-image: url(img/the_fortune_tellers_tent__by_x_cannibal_dfasjsn-pre.jpg)
-    background-position: 0% 30%;
-    background-repeat: no-repeat;
-    background-size: cover 
-}
-
-
-
-/*#title {
-    display: flex;
-    justify-content: center;
-}
-
-#title h1 {
-    background-color: blanchedalmond;
-    padding: 5px;
-    margin: 0;
-}
-
-*/
 #door {
     position: absolute;
-    left: 42%;
-    top: 54%;
-    width: 14%;
-    border-radius: 100px;
-    opacity: 4;
+    left: 46.7%;
+    top: 59%;
+    width: 6.6%;
+    border-radius: 90% 90% 20% 20%;
+    opacity: 0.6;
 }
 
 #door:hover {
@@ -362,10 +326,10 @@ li:nth-of-type(20) {
 
     #door {
         position: absolute;
-        left: 42%;
-        top: 54%;
-        width: 15%;
-        border-radius: 100px;
+        left: 46.7%;
+        top: 57%;
+        width: 6.6%;
+        border-radius: 90% 90% 20% 20%;
         opacity: 4;
     
     }
