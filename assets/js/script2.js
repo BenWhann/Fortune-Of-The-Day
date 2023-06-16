@@ -120,7 +120,7 @@ function secondApiCall(category) {
     }
 
     //query string: limiting to return 5 result and rating is g or pg, search by category returned from first api call
-    var queryURL = 'http://api.giphy.com/v1/stickers/search?q=' + category + '&limit=5&rating=pg&api_key=wZmi04Bta6Iozo1cs6TlyPaawcltolg1';
+    var queryURL = 'https://api.giphy.com/v1/stickers/search?q=' + category + '&limit=5&rating=pg&api_key=wZmi04Bta6Iozo1cs6TlyPaawcltolg1';
     //handles ajax request to Giphy API
     $.ajax({
         url: queryURL, method: 'GET', success: function (data) {
@@ -128,6 +128,7 @@ function secondApiCall(category) {
             //shuffle 5 returned stickers, and select 2 from shuffled array
             const shuffled = [...data.data].sort(() => 0.5 - Math.random());
             var resultArray = shuffled.slice(0, 2);
+            console.log(resultArray);
             resultArray.forEach(element => {
                 //create new image element and append to imageBox section
                 imageBox.appendChild(new Image()).src = element.images.fixed_height.url;
