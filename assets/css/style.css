@@ -908,3 +908,33 @@ li:nth-of-type(20) {
     margin-left: 70%;
     background-color: rgba(255, 0, 0, 0.74);
 }
+
+ /* button 1 hover over annimation */
+.btn-1 {
+ box-shadow: inset 0 0 0 0 #7b06f9;
+ transition: ease-out 0.3s;
+ font-size: 2rem;
+ outline:none;
+}
+
+.btn-1:hover {
+    box-shadow: inset 1360px 0 0 0 #7b06f9;
+    cursor: pointer;
+    color: gray;
+
+}
+
+/* button 2 hover over animation */
+
+.btn-2 {
+    box-shadow: inset 0 0 0 0 #7b06f9;
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline:none;
+}
+
+.btn-2:hover {
+    box-shadow: inset 1360px 0 0 0 #7b06f9;
+    cursor: pointer;
+    color: gray;
+}
