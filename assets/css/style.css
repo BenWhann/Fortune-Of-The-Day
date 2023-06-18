@@ -454,7 +454,7 @@ li:nth-of-type(20) {
 .span {
   display: inline-block;
   vertical-align: middle;
-  line-height: 350%;
+  line-height: 200%;
   font-family: Caveat;
   font-size: 1.75rem;
   color: black;
