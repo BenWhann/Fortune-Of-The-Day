@@ -70,7 +70,7 @@ function firstApiCall() {
         url: 'https://fortune-cookie2.p.rapidapi.com/fortune',
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'fa3285ea19msh8489627d707771ep12bab8jsnd7dcedac6924',
+            'X-RapidAPI-Key': '7386ea0094msh994fc1aa8c76be8p1d2b99jsn491d83b62a2a',
             'X-RapidAPI-Host': 'fortune-cookie2.p.rapidapi.com'
         },
         success: function (data) {
