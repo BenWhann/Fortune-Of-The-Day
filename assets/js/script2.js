@@ -3,7 +3,6 @@ var mainPage = document.querySelector('#mainPage');
 var imageBox = document.querySelector('.imageTest');
 var fortuneText = document.querySelector('#fortuneText');
 var crystalBall = document.querySelector('.crystalBall');
-
 /*cursor*/
 var cursor = document.querySelector('.cursor')
 document.addEventListener('mousemove', e => {
@@ -108,7 +107,6 @@ function firstApiCall() {
         console.log("application error: " + error);
     });
 }
-
 
 function secondApiCall(category) {
     //if category returned from first API call is general fortune, pass fortune to next API call instead due to limited results

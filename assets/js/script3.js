@@ -7,7 +7,6 @@ var storedFortuneArray = JSON.parse(localStorage.getItem("Fortunes"));
 
 var i = 1;
 storedFortuneArray.forEach(element => {
-
     var newDiv = document.createElement("div");
     newDiv.textContent = element.weekDay;
     newDiv.setAttribute("class","fortune")
@@ -38,7 +37,6 @@ storedFortuneArray.forEach(element => {
 
     i++;
 });
-
 
 var fortune1 = document.querySelector('#fortune-1');
 var card1 = document.querySelector('#card-1');
@@ -74,8 +72,8 @@ fortune1.addEventListener("click", function(){
     card7.classList.add('hide');
     closeButton7.classList.add('hide');
     span7.classList.add('hide');
-
 })
+
 closeButton1.addEventListener("click", function(){
     card1.classList.add('hide');
     closeButton1.classList.add('hide');
@@ -117,8 +115,8 @@ fortune2.addEventListener("click", function(){
     card7.classList.add('hide');
     closeButton7.classList.add('hide');
     span7.classList.add('hide');
-
 })
+
 closeButton2.addEventListener("click", function(){
     card2.classList.add('hide');
     closeButton2.classList.add('hide');
@@ -160,8 +158,8 @@ fortune3.addEventListener("click", function(){
     card7.classList.add('hide');
     closeButton7.classList.add('hide');
     span7.classList.add('hide');
-
 })
+
 closeButton3.addEventListener("click", function(){
     card3.classList.add('hide');
     closeButton3.classList.add('hide');
@@ -203,14 +201,13 @@ fortune4.addEventListener("click", function(){
     card7.classList.add('hide');
     closeButton7.classList.add('hide');
     span7.classList.add('hide');
-
 })
+
 closeButton4.addEventListener("click", function(){
     card4.classList.add('hide');
     closeButton4.classList.add('hide');
     span4.classList.add('hide');
     cardBackground.classList.add('hide');
-
 })
 
 var fortune5 = document.querySelector('#fortune-5');
@@ -247,14 +244,13 @@ fortune5.addEventListener("click", function(){
     card7.classList.add('hide');
     closeButton7.classList.add('hide');
     span7.classList.add('hide');
-
 })
+
 closeButton5.addEventListener("click", function(){
     card5.classList.add('hide');
     closeButton5.classList.add('hide');
     span5.classList.add('hide');
     cardBackground.classList.add('hide');
-
 })
 
 var fortune6 = document.querySelector('#fortune-6');
@@ -291,14 +287,13 @@ fortune6.addEventListener("click", function(){
     card7.classList.add('hide');
     closeButton7.classList.add('hide');
     span7.classList.add('hide');
-
 })
+
 closeButton6.addEventListener("click", function(){
     card6.classList.add('hide');
     closeButton6.classList.add('hide');
     span6.classList.add('hide');
     cardBackground.classList.add('hide');
-
 })
 
 var fortune7 = document.querySelector('#fortune-7');
@@ -335,12 +330,11 @@ fortune7.addEventListener("click", function(){
     card1.classList.add('hide');
     closeButton1.classList.add('hide');
     span1.classList.add('hide');
-
 })
+
 closeButton7.addEventListener("click", function(){
     card7.classList.add('hide');
     closeButton7.classList.add('hide');
     span7.classList.add('hide');
     cardBackground.classList.add('hide');
-
 })
