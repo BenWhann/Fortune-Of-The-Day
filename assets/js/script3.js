@@ -3,6 +3,21 @@ var cardContainer = document.querySelector('#cards-container');
 var cardContainer2 = document.querySelector('#cards-container-2');
 var cardBackground = document.querySelector('#card-background');
 
+var page2Btn = document.querySelector('#page2Btn');
+var page1Btn = document.querySelector('#page1Btn');
+
+//button to return to fortune page
+page2Btn.addEventListener('click', function () {
+    console.log('btn1 works');
+    document.location.replace('./secondpage.html');
+})
+
+//button to return to home page
+page1Btn.addEventListener('click', function () {
+    console.log('btn2 works');
+    document.location.replace('./index.html');
+})
+
 var storedFortuneArray = JSON.parse(localStorage.getItem("Fortunes"));
 
 var i = 1;
