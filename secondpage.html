@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
   <title>Inside Tent</title>
 </head>
-
 <body class="second-body">
   <!-- class to handle custom cursor following element -->
   <div class="cursor"></div>
@@ -25,20 +22,16 @@
         <span class="bannerTwo"> Rub orb for a Fortune</span>
         <ion-icon id="moonIconTwo" color="black" name="moon-outline"> </ion-icon>
       </section>
-
-
       <!-- contains the fortune text that will be set in the js -->
       <section id="fortuneBox">
         <h2><span id="fortuneText"></span></h2>
       </section>
-
       <!-- parent class the giphy stickers will be appended to -->
       <div class="imageTest"></div>
       <!-- the transparent image the user will hover or rub over to make fortune appear -->
       <img class="crystalBall" id="crystalBall" src="./assets/img/clearBackground.png">
     </div>
   </div>
-
   <!-- smoke images that animate over the crystal ball -->
   <div id="smokeAniOne">
     <img id="smokeOne" src="assets/img/smoke.png">
@@ -52,22 +45,16 @@
   <div id="smokeAniFour">
     <img id="smokeFour" src="assets/img/smoke.png">
   </div>
-
   <!-- footer containing 2 nav buttons -->
-  <footer id="footer">
-
+  <footer class="footer">
     <button class="button is-large is-fullwidth buttonsInside buttonsPagetwo btn-1" id="fortuneBtn">See your weekly
       fortunes</button>
-
     <button class="button is-large is-fullwidth buttonsInside buttonsPageTwo btn-2" id="mainPage">Return to main
       page</button>
   </footer>
-
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="./assets/js/script2.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>

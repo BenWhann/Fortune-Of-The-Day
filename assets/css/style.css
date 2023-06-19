@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Rye);
 
-
 html,
 body {
     height: 100%;
@@ -13,43 +12,43 @@ body {
     background-position: center;
 }
 
-/*png svg image of clipart*/
+/*Ribbon Banner*/
 .banner {
     position: absolute;
     left: 50%;
-    top: 10%;
+    top: 7%;
     display: block;
     margin: 100px -200px;
-    width: 400px;
+    width: 420px;
     height: 60px;
     border: 1px solid rgb(245, 218, 130);
-    font: normal 30px/60px 'Rye';
-    text-align: center;
+    font: 40px 'Rye';
     color: rgb(53, 63, 23);
     background: rgb(255, 228, 140);
     border-radius: 4px;
     box-shadow: 0 0 30px rgba(0, 0, 3, .15) inset,
-        0 6px 10px rgba(0, 0, 3, .15);
+                0 6px 10px rgba(0, 0, 3, .15);
     transform-style: preserve-3d;
 }
 
+/*Left side of banner*/
 .banner::before {
     content: '';
     position: absolute;
     left: -71px;
     z-index: -1;
     top: 15px;
-    ;
     width: 90px;
     display: block;
     height: 60px;
-    border: 30px solid rgb(255, 228, 140);
+    border: 35px solid rgb(255, 228, 140);
     border-right: 20px solid rgb(194, 173, 105);
     border-bottom-color: rgb(255, 228, 140);
     border-left: 20px solid transparent;
     transform: translateZ(-1px) rotate(-5deg);
 }
 
+/*Right side of banner*/
 .banner::after {
     content: '';
     position: absolute;
@@ -59,7 +58,7 @@ body {
     width: 90px;
     display: block;
     height: 60px;
-    border: 30px solid rgb(255, 228, 140);
+    border: 35px solid rgb(255, 228, 140);
     border-left: 20px solid rgb(194, 173, 105);
     border-bottom-color: rgb(255, 228, 140);
     border-right: 20px solid transparent;
@@ -67,42 +66,27 @@ body {
     transform: translateZ(-1px) rotate(6deg);
 }
 
-.back-tent-button {
-    width: 30%;
-}
-
-ion-icon {
-    color: bisque;
-    font-size: 64px;
-    -webkit-transform: rotate(105deg);
-    -moz-transform: rotate(105deg);
-    -ms-transform: rotate(105deg);
-    -o-transform: rotate(105deg);
-    transform: rotate(105deg);
-    display: inline-block;
-}
-
 #door {
     position: absolute;
     left: 46.7%;
-    top: 59%;
+    top: 60%;
     width: 6.6%;
     border-radius: 90% 90% 20% 20%;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 #door:hover {
     filter: brightness(150%);
 }
 
+/*Heart beat animation for the door*/
 .animate__animated.animate__heartBeat {
-    --animate-duration: 2s;
+    --animate-duration: 2.5s;
 }
 
 .fireflies {
     list-style: none;
 }
-
 
 .fireflies li {
     /*rounds out the boxes into circles*/
@@ -119,9 +103,8 @@ ion-icon {
         0 0 5px 2px rgb(250, 193, 93),
         0 0 20px 10px rgb(255, 228, 140),
         0 0 40px 15px rgb(255, 219, 41);
-    height: 0px;
-    width: 0px;
-
+    height: 1px;
+    width: 1px;
     position: absolute;
     left: 49.5%;
     top: 68%;
@@ -133,7 +116,6 @@ ion-icon {
     animation: leftright 24s infinite cubic-bezier(0.39, 0, 0.63, 1),
         updown 8s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1),
         blinking 3s infinite;
-
 }
 
 /*target individual li's with the animation effects*/
@@ -254,30 +236,23 @@ li:nth-of-type(20) {
 /*controls left and right movements*/
 /*left refers to the absolute position on the page*/
 @keyframes leftright {
-
     /*starting postion*/
     0%,
     100% {
         left: 49.5%;
     }
-
     16.666% {
         left: 95%;
     }
-
     33.333% {
         left: 10%;
     }
-
-    /*halfway through the animation*/
     50% {
         left: 60%;
     }
-
     66.666% {
         left: 70%;
     }
-
     83.333% {
         left: 5%;
     }
@@ -286,55 +261,46 @@ li:nth-of-type(20) {
 /*controls the up and down*/
 /*top refers to the absolute position on the page*/
 @keyframes updown {
-
     /*starting position*/
     0%,
     100% {
         top: 68%;
     }
-
     25% {
         top: 90%;
     }
-
     50% {
         top: 50%;
     }
-
     75% {
         top: 95%;
     }
 }
 
-
 /*controls the blinking*/
 @keyframes blinking {
-
     /*use the blur and spread radius only*/
     0%,
     100% {
         box-shadow: 0 0 5px 2px rgb(250, 193, 93),
-            0 0 10px 5px rgb(255, 242, 63),
-            0 0 30px 10px rgb(255, 219, 41);
+                    0 0 10px 5px rgb(255, 242, 63),
+                    0 0 30px 10px rgb(255, 219, 41);
         height: 0;
         width: 0;
     }
-
     50% {
         box-shadow: 0 0 5px 2px rgb(250, 193, 93),
-            0 0 20px 10px rgb(255, 228, 140),
-            0 0 40px 15px rgb(255, 219, 41);
+                    0 0 20px 10px rgb(255, 228, 140),
+                    0 0 40px 15px rgb(255, 219, 41);
     }
-
     75% {
         box-shadow: 0 0 0px 0px rgb(250, 193, 93),
-            0 0 0px 0px rgb(255, 228, 140),
-            0 0 0px 0px rgb(255, 219, 41);
+                    0 0 0px 0px rgb(255, 228, 140),
+                    0 0 0px 0px rgb(255, 219, 41);
     }
 }
 
 @media screen and (max-width: 768px) {
-
     #door {
         position: absolute;
         left: 46.7%;
@@ -342,13 +308,10 @@ li:nth-of-type(20) {
         width: 6.6%;
         border-radius: 90% 90% 20% 20%;
         opacity: 4;
-
     }
-
 }
 
 @media screen and (max-width: 428px) {
-
     #door {
         position: absolute;
         left: 41%;
@@ -356,7 +319,6 @@ li:nth-of-type(20) {
         width: 18%;
         border-radius: 100px;
         opacity: 4;
-
     }
 }
 
@@ -499,7 +461,7 @@ li:nth-of-type(20) {
     cursor: pointer;
 }
 
-/* start of 2nd page */
+/* START OF 2ND PAGE*/
 .second-body {
     background-image: url(../img/Crystal-ball.png);
     background-repeat: no-repeat;
@@ -532,7 +494,7 @@ li:nth-of-type(20) {
     background: rgb(255, 228, 140);
     border-radius: 4px;
     box-shadow: 0 0 30px rgba(0, 0, 3, .15) inset,
-        0 6px 10px rgba(0, 0, 3, .15);
+                0 6px 10px rgba(0, 0, 3, .15);
     transform-style: preserve-3d;
 }
 
@@ -542,11 +504,10 @@ li:nth-of-type(20) {
     left: -71px;
     z-index: -1;
     top: 15px;
-    ;
     width: 90px;
     display: block;
     height: 60px;
-    border: 30px solid rgb(255, 228, 140);
+    border: 33px solid rgb(255, 228, 140);
     border-right: 20px solid rgb(194, 173, 105);
     border-bottom-color: rgb(255, 228, 140);
     border-left: 20px solid transparent;
@@ -562,7 +523,7 @@ li:nth-of-type(20) {
     width: 90px;
     display: block;
     height: 60px;
-    border: 30px solid rgb(255, 228, 140);
+    border: 33px solid rgb(255, 228, 140);
     border-left: 20px solid rgb(194, 173, 105);
     border-bottom-color: rgb(255, 228, 140);
     border-right: 20px solid transparent;
@@ -577,81 +538,65 @@ li:nth-of-type(20) {
     }
 }
 
-
-/*#fortuneBox {
-    position:absolute !important;
-    margin-left: 78%;
-    margin-top: 5%;
-    width: 200px !important;
-}*/
 #fortuneText {
-
     font-family: fantasy; 
-    
-       background-image: linear-gradient( /* all the word colors you see changing on page */
-         -100deg,
-         #05030d 5%,
-         #42196e 29%,
-         rgba(255, 0, 0, 0.74) 67%,
-         rgb(255, 228, 140) 100%
-       );
-       background-size: 200% auto; /* Does background gradient repeating effect on fortune words */
-       -webkit-background-clip: text; /* Makes text appear on page with effects added on text*/
-       -webkit-text-fill-color: transparent; /* the fill color effect without this words wont have color effect */
-       animation: textclip 2s linear infinite; /* color animation resetting every 2s */
-       display: inline-block; /* makes display of color change come from right to left of page */
-
-     }
-     
-     @keyframes textclip {
-       to {
-         background-position: 200%; /* also a factor in how fast text changes in color from right to left */
-       }
-     }
-
-     @media screen and (max-width: 1024px) {
-
-        #fortuneBox {
-            position:absolute !important;
-            margin-left: 81%;
-            margin-top: 5%;
-            width: 175px !important; 
-        
-        }
-    
-    }
-    
-#fortuneBox {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  font-size: 3px;
-  max-width: 30ch;
-  width: 30px;
-  animation: fortune;
-  animation-duration: 8s;
-  animation-fill-mode: forwards;
+    background-image: linear-gradient( /* all the word colors you see changing on page */
+                      -100deg,
+                      #05030d 5%,
+                      #42196e 29%,
+                      rgba(255, 0, 0, 0.74) 67%,
+                      rgb(255, 228, 140) 100%
+);
+    background-size: 200% auto; /* Does background gradient repeating effect on fortune words */
+    -webkit-background-clip: text; /* Makes text appear on page with effects added on text*/
+    -webkit-text-fill-color: transparent; /* the fill color effect without this words wont have color effect */
+    animation: textclip 2s linear infinite; /* color animation resetting every 2s */
+    display: inline-block; /* makes display of color change come from right to left of page */
 }
-  
-@keyframes fortune {
-  
-  0% { 
+     
+@keyframes textclip {
+    to {
+        background-position: 200%; /* also a factor in how fast text changes in color from right to left */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #fortuneBox {
+        position:absolute !important;
+        margin-left: 81%;
+        margin-top: 5%;
+        width: 175px !important; 
+        }
+}
+    
+/*Fortune Animation*/
+#fortuneBox {
+    position: absolute;
     top: 20%;
     left: 50%;
     font-size: 3px;
-    filter: blur(10px);
+    max-width: 30ch;
+    width: 30px;
+    animation: fortune;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
 }
-
-100% {
-    top: 25%;
-    left: 76.5%;
-    font-size: 22px;
-    width: 200px;
-    filter: blur(0px)
+  
+@keyframes fortune {
+    0% { 
+        top: 20%;
+        left: 50%;
+        font-size: 3px;
+        filter: blur(10px);
+    }
+    100% {
+        top: 25%;
+        left: 76.5%;
+        font-size: 22px;
+        width: 200px;
+        filter: blur(0px)
 }
-
 }
-
 
 #page-container {
     position: relative;
@@ -660,10 +605,9 @@ li:nth-of-type(20) {
 
 #content-wrap {
     padding-bottom: 2.5rem;
-    /* Footer height */
 }
 
-
+/*Smoke Animation for crystal ball*/
 #smokeAniOne {
     position: absolute;
     left: 45%;
@@ -678,7 +622,6 @@ li:nth-of-type(20) {
     transform: translateX(-50%) rotate(154deg);
 }
 
-/*Smoke Animation*/
 #smokeAniThree {
     position: absolute;
     left: 43%;
@@ -726,25 +669,21 @@ li:nth-of-type(20) {
         transform: translateY(0px);
         opacity: 0.3;
     }
-
     25% {
         filter: blur(3px) brightness(8px);
         transform: translateY(-10px);
         opacity: 0.8;
     }
-
     50% {
         filter: blur(5px) brightness(10px);
         transform: translateY(-20px);
         opacity: 1.5;
     }
-
     75% {
         filter: blur(5px) brightness(13px);
         transform: translateY(-30px);
         opacity: 1.0;
     }
-
     100% {
         filter: blur(7px) brightness(15px);
         transform: translateY(-40px);
@@ -758,25 +697,21 @@ li:nth-of-type(20) {
         transform: translateY(0px);
         opacity: 0;
     }
-
     25% {
         filter: blur(3px) brightness(8px);
         transform: translateY(-10px);
         opacity: 0.5;
     }
-
     50% {
         filter: blur(5px) brightness(10px);
         transform: translateY(-20px);
         opacity: 1;
     }
-
     75% {
         filter: blur(5px) brightness(13px);
         transform: translateY(-30px);
         opacity: 0.5;
     }
-
     100% {
         filter: blur(7px) brightness(15px);
         transform: translateY(-40px);
@@ -790,25 +725,21 @@ li:nth-of-type(20) {
         transform: translateY(0px);
         opacity: 0;
     }
-
     25% {
         filter: blur(3px) brightness(8px);
         transform: translateY(-20px);
         opacity: 0.5;
     }
-
     50% {
         filter: blur(5px) brightness(10px);
         transform: translateY(-40px);
         opacity: 1;
     }
-
     75% {
         filter: blur(5px) brightness(13px);
         transform: translateY(-60px);
         opacity: 0.5;
     }
-
     100% {
         filter: blur(7px) brightness(16px);
         transform: translateY(-80px);
@@ -822,25 +753,21 @@ li:nth-of-type(20) {
         transform: translateY(0px);
         opacity: 0;
     }
-
     25% {
         filter: blur(3px) brightness(6px);
         transform: translateY(-20px);
         opacity: 0.5;
     }
-
     50% {
         filter: blur(5px) brightness(9px);
         transform: translateY(-40px);
         opacity: 1;
     }
-
     75% {
         filter: blur(5px) brightness(13px);
         transform: translateY(-60px);
         opacity: 0.5;
     }
-
     100% {
         filter: blur(7px) brightness(16px);
         transform: translateY(-80px);
@@ -848,6 +775,7 @@ li:nth-of-type(20) {
     }
 }
 
+/*Giphy Animation*/
 .imageTest img {
     position: absolute;
     top: 22%;
@@ -860,7 +788,6 @@ li:nth-of-type(20) {
     animation-name: giphy;
     animation-duration: 8s;
     animation-fill-mode: forwards;
-
 }
 
 .imageTest img:nth-of-type(2) {
@@ -868,7 +795,6 @@ li:nth-of-type(20) {
     animation-duration: 8s;
     animation-fill-mode: forwards;
 }
-
 
 @keyframes giphy {
     0% {
@@ -878,7 +804,6 @@ li:nth-of-type(20) {
         height: 0px;
         width: 0px;
     }
-
     100% {
         top: 14%;
         left: 7%;
@@ -896,7 +821,6 @@ li:nth-of-type(20) {
         height: 0px;
         width: 0px;
     }
-
     100% {
         top: 45%;
         left: 7%;
@@ -906,13 +830,12 @@ li:nth-of-type(20) {
     }
 }
 
-#footer {
+.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 11rem;
     background-color: rgb(167, 160, 160);
-    /* Footer height */
 }
 
 .buttonsInside {
@@ -934,21 +857,19 @@ li:nth-of-type(20) {
 
  /* button 1 hover over annimation */
 .btn-1 {
- box-shadow: inset 0 0 0 0 #7b06f9;
- transition: ease-out 0.3s;
- font-size: 2rem;
- outline:none;
+    box-shadow: inset 0 0 0 0 #7b06f9;
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline:none;
 }
 
 .btn-1:hover {
     box-shadow: inset 1360px 0 0 0 #7b06f9;
     cursor: pointer;
     color: gray;
-
 }
 
 /* button 2 hover over animation */
-
 .btn-2 {
     box-shadow: inset 0 0 0 0 #7b06f9;
     transition: ease-out 0.3s;
@@ -960,4 +881,120 @@ li:nth-of-type(20) {
     box-shadow: inset 1360px 0 0 0 #7b06f9;
     cursor: pointer;
     color: gray;
+}
+
+/* Third page css starts here */
+#page-3-container {
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background-image: url(https://i.etsystatic.com/18697140/r/il/e22680/2886990481/il_1588xN.2886990481_clz7.jpg);
+    background-size: 100% 100%;
+}
+
+#page-3-title-container {
+    border: 1px solid;
+    margin: 5px;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    top: 5%;
+    left: 22%;
+    border-radius: 15px;
+}
+
+#page-3-title {
+    font-size: 4rem;
+}
+
+#fortunes-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    height: 400px;
+    width: 55%;
+    perspective: 1100px;
+}
+
+#fortunes-container:last-child {
+    justify-content: center;
+}
+
+.fortune {
+    text-align: center;
+    font-size: 2rem;
+    border: 1px solid;
+    margin: 5px;
+    width: 30%;
+    height: 100px;
+    background-color: white;
+    font-family: Caveat;
+    font-size: 2.75rem;
+    transform-style: preserve-3d;
+    transform: rotateX(35deg);
+    transition: all 0.3s ease-in-out 0s;
+    border-radius: 5px;
+}
+
+.fortune:hover {
+    cursor: pointer;
+}
+
+#card-background {
+    background-color: rgb(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+#cards-container {
+    width: 40%;
+    height: 20%;
+    z-index: 2;
+    position: fixed;
+}
+
+#cards-container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid;
+    text-align: center;
+    height: 100%;
+    z-index: 2;
+}
+
+.span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 200%;
+    font-family: Caveat;
+    font-size: 1.75rem;
+    color: black;
+}
+
+.closeButton {
+    background-color: white;
+    margin: auto;
+    font-family: Caveat;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.closeButton:hover {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
 }

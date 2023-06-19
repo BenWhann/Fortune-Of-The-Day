@@ -3,7 +3,6 @@ var mainPage = document.querySelector('#mainPage');
 var imageBox = document.querySelector('.imageTest');
 var fortuneText = document.querySelector('#fortuneText');
 var crystalBall = document.querySelector('.crystalBall');
-
 /*cursor*/
 var cursor = document.querySelector('.cursor')
 document.addEventListener('mousemove', e => {
@@ -71,7 +70,7 @@ function firstApiCall() {
         url: 'https://fortune-cookie2.p.rapidapi.com/fortune',
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'fa3285ea19msh8489627d707771ep12bab8jsnd7dcedac6924',
+            'X-RapidAPI-Key': '7386ea0094msh994fc1aa8c76be8p1d2b99jsn491d83b62a2a',
             'X-RapidAPI-Host': 'fortune-cookie2.p.rapidapi.com'
         },
         success: function (data) {
@@ -108,7 +107,6 @@ function firstApiCall() {
         console.log("application error: " + error);
     });
 }
-
 
 function secondApiCall(category) {
     //if category returned from first API call is general fortune, pass fortune to next API call instead due to limited results
