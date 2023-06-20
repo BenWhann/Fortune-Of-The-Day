@@ -846,12 +846,16 @@ li:nth-of-type(20) {
 #moonIconOne {
     margin-top: 1%;
     margin-left: 10%;
+    width: 50px;
+    height:50px;
     background-color: rgba(255, 0, 0, 0.74);
 }
 
 #moonIconTwo {
     margin-top: 1%;
     margin-left: 70%;
+    width: 50px;
+    height:50px;
     background-color: rgba(255, 0, 0, 0.74);
 }
 
@@ -864,7 +868,7 @@ li:nth-of-type(20) {
 }
 
 .btn-1:hover {
-    box-shadow: inset 1360px 0 0 0 #7b06f9;
+    box-shadow: inset 1500px 0 0 0 #7b06f9;
     cursor: pointer;
     color: gray;
 }
@@ -878,7 +882,7 @@ li:nth-of-type(20) {
 }
 
 .btn-2:hover {
-    box-shadow: inset 1360px 0 0 0 #7b06f9;
+    box-shadow: inset 1500px 0 0 0 #7b06f9;
     cursor: pointer;
     color: gray;
 }
